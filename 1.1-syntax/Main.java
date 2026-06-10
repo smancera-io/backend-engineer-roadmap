@@ -16,7 +16,7 @@ public class Main {
         System.out.println(number4);
         System.out.println(casting);
 
-        /* Create a loop */
+        /* Create a for loop */
         for (int i = 1; i < 21; i++){
             if (i % 2 == 0){
                 System.out.println(i);
@@ -24,6 +24,18 @@ public class Main {
                     break;
                 }
             }
+        }
+
+        /* Create a while loop */
+        int i = 1;
+        while(i < 21){
+            if (i % 2 == 0){
+                System.out.println(i);
+                if (i == 16){
+                    break;
+                }
+            }
+            i++;
         }
     }
 }
