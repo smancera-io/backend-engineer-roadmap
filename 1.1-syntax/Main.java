@@ -7,8 +7,8 @@ public class Main {
         int number3 = 520000;
         double number4 = 3.141516;
         long number5 = 10000000000L;
+        short number6 = 4;
         char letter = 'S';
-        String word = "Samuel";
         boolean flag = true;
 
         /* Casting double number to int number */
