@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -53,5 +56,10 @@ public class Main {
             default -> "Invalid season";
         };
         System.out.println(seasonName);
+
+        /* Understanding autoboxing */
+        List <Integer> numbers = new ArrayList<>();
+        /* Java transform the primitive data type into its 'Wrapper' class (Integer) */
+        numbers.add(5); 
     }
 }
