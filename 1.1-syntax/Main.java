@@ -11,6 +11,11 @@ public class Main {
         char letter = 'S';
         boolean flag = true;
 
+        /* Inizialize 'var' variables */
+        var data1 = 5;
+        var data2 = 'E';
+        var data3 = false;
+
         /* Casting double number to int number */
         int casting = (int) number4;
         System.out.println(number4);
