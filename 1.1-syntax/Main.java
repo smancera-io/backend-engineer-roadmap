@@ -17,10 +17,10 @@ public class Main {
         System.out.println(casting);
 
         /* Create a for loop */
-        for (int i = 1; i < 21; i++){
-            if (i % 2 == 0){
+        for (int i = 1; i < 21; i++) {
+            if (i % 2 == 0) {
                 System.out.println(i);
-                if (i == 16){
+                if (i == 16) {
                     break;
                 }
             }
@@ -28,14 +28,28 @@ public class Main {
 
         /* Create a while loop */
         int i = 1;
-        while(i < 21){
-            if (i % 2 == 0){
+        while (i < 21) {
+            if (i % 2 == 0) {
                 System.out.println(i);
-                if (i == 16){
+                if (i == 16) {
                     break;
                 }
             }
             i++;
         }
+
+        /* Create a switch expression */
+        int dia = 3;
+        String nombreDia = switch (dia) {
+            case 1 -> "Lunes";
+            case 2 -> "Martes";
+            case 3 -> "Miércoles";
+            case 4 -> "Jueves";
+            case 5 -> "Viernes";
+            case 6 -> "Sábado";
+            case 7 -> "Domingo";
+            default -> "Día inválido";
+        };
+        System.out.println(nombreDia);
     }
 }
