@@ -39,17 +39,14 @@ public class Main {
         }
 
         /* Create a switch expression */
-        int dia = 3;
-        String nombreDia = switch (dia) {
-            case 1 -> "Lunes";
-            case 2 -> "Martes";
-            case 3 -> "Miércoles";
-            case 4 -> "Jueves";
-            case 5 -> "Viernes";
-            case 6 -> "Sábado";
-            case 7 -> "Domingo";
-            default -> "Día inválido";
+        int season = 3;
+        String seasonName = switch (season) {
+            case 1 -> "Spring";
+            case 2 -> "Summer";
+            case 3 -> "Autumn";
+            case 4 -> "Winter";
+            default -> "Invalid season";
         };
-        System.out.println(nombreDia);
+        System.out.println(seasonName);
     }
 }
