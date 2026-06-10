@@ -15,5 +15,15 @@ public class Main {
         int casting = (int) number4;
         System.out.println(number4);
         System.out.println(casting);
+
+        /* Create a loop */
+        for (int i = 1; i < 21; i++){
+            if (i % 2 == 0){
+                System.out.println(i);
+                if (i == 16){
+                    break;
+                }
+            }
+        }
     }
 }
