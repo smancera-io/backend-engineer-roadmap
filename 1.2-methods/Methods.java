@@ -33,7 +33,7 @@ public class Methods {
             return number1 + number2;
         }
 
-        /* Apply overcharge method */
+        /* Overload method */
         public static double sum (double number1, double number2){
             return number1 + number2;
         }
