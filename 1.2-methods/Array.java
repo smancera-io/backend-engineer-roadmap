@@ -27,7 +27,7 @@ public class Array {
         System.out.println(Arrays.toString(numbers));
 
         /* Use modifyArray method */
-        numbers = modifyArray(numbers);
+        modifyArray(numbers);
 
         /* Print numbers array content */
         for (int i : numbers) {
@@ -36,8 +36,7 @@ public class Array {
     }
 
     /* Create method modify array */
-    public static int [] modifyArray (int [] numbers){
+    public static void modifyArray (int [] numbers){
         numbers [0] = 526;
-        return numbers;
     }
 }
