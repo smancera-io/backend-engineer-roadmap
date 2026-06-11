@@ -11,6 +11,8 @@ public class Strings {
         /* Compare string using equals */
         System.out.println(word.equals(word2));
 
-        /* The diference in the results is due to the operators function, because '==' with strings compare their memory directions, and equals their value */
+        /* The diference in the results is due to the operators function, 
+        because '==' with strings compare their memory directions, 
+        and equals their value */
     }
 }
