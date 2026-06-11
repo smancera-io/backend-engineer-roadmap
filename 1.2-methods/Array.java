@@ -25,6 +25,14 @@ public class Array {
 
         /* Print the sorted numbers array */
         System.out.println(Arrays.toString(numbers));
+
+        /* Use modifyArray method */
+        int [] newNumbers = modifyArray(numbers);
+
+        /* Print numbers array content */
+        for (int i : newNumbers) {
+            System.out.println(i);
+        }
     }
 
     /* Create method modify array */
