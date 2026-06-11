@@ -27,10 +27,10 @@ public class Array {
         System.out.println(Arrays.toString(numbers));
 
         /* Use modifyArray method */
-        int [] newNumbers = modifyArray(numbers);
+        numbers = modifyArray(numbers);
 
         /* Print numbers array content */
-        for (int i : newNumbers) {
+        for (int i : numbers) {
             System.out.println(i);
         }
     }
