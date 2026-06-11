@@ -26,4 +26,10 @@ public class Array {
         /* Print the sorted numbers array */
         System.out.println(Arrays.toString(numbers));
     }
+
+    /* Create method modify array */
+    public static int [] modifyArray (int [] numbers){
+        numbers [0] = 526;
+        return numbers;
+    }
 }
