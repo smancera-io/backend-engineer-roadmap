@@ -14,5 +14,10 @@ public class Strings {
         /* The diference in the results is due to the operators function, 
         because '==' with strings compare their memory directions, 
         and equals their value */
+
+        String [] characters = word.split("");
+        for (String s: characters) {
+            System.out.println(s);
+        }
     }
 }
