@@ -30,4 +30,15 @@ public class BankAccount {
     public void setBalance (double balance) {
         this.balance = balance;
     }
+
+    /* Declare deposit method */
+    public void deposit (double amount) {
+        if (amount <= 0){
+            System.out.println("Error: the deposit amount couldn't be less than or equal to 0");
+        } else {
+            balance += amount;
+            System.out.println("Successful deposit");
+            System.out.printf("Your new balance is $%.2d", balance);
+        }
+    }
 }
