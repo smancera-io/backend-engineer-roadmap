@@ -6,9 +6,9 @@ public class BankAccount {
     private double balance;
 
     /* Create constructor */
-    public BankAccount (String owner, long accountNumber, double balance){
+    public BankAccount (String owner, double balance){
         this.owner = owner;
-        this.accountNumber = accountNumber;
+        this.accountNumber = setAccountNumber();
         this.balance = balance;
     }
 
@@ -29,6 +29,10 @@ public class BankAccount {
     }
     public void setBalance (double balance) {
         this.balance = balance;
+    }
+    public long setAccountNumber () {
+        this.accountNumber = (long) (Math.random() * 1000000000) + 1;
+        return accountNumber;
     }
 
     /* Declare deposit method */
