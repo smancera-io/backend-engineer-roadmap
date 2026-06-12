@@ -14,8 +14,15 @@ public class Strings {
         System.out.println(word.equals(word2));
 
         /* The diference in the results is due to the operators function, 
-        because '==' with strings compare their memory directions, 
-        and equals their value */
+        because '==' with strings compare their memory directions. 
+        Besides, when we use new String that value its save directly in the Heap,
+        so it has a new direction of memory 
+        but creating normal strings with "" the first value goes to the String pool,
+        and if we create another string with the same value, 
+        java check if in the String pool already exists that value, if so,
+        in the second string java aims to the same direction that the first one,
+        so if we compare string 1 and to with == will return true.
+        Finally, coming back to the another compare method, equals compare their values */
 
         /* Create string phrase */
         String phrase = "     Learning java fundamentals and using git control version";
