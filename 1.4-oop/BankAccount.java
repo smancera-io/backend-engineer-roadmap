@@ -11,4 +11,15 @@ public class BankAccount {
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
+
+    /* Declare getter methods */
+    public String getOwner () {
+        return owner;
+    }
+    public long getAccountNumber () {
+        return accountNumber;
+    }
+    public double getBalance () {
+        return balance;
+    }
 }
