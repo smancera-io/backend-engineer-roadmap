@@ -25,5 +25,26 @@ public class Strings {
         for (String s: characters) {
             System.out.println(s);
         }
+
+        /* Use substring */
+        String newPhrase = phrase.substring(0, 26);
+        System.out.println(newPhrase);
+
+        /* Use indexOf */
+        int index = word.indexOf('o');
+        System.out.println(index);
+
+        /* Use toLowerCase */
+        String word3 = "CARRO";
+        String lowerCase = word3.toLowerCase();
+        System.out.println(lowerCase);
+
+        /* Use trim */
+        String trimPhrase = phrase.trim();
+        System.out.println(trimPhrase);
+
+        /* Use format */
+        String formatPhrase = String.format("El dia de hoy compre un %s.", lowerCase);
+        System.out.println(formatPhrase);
     }
 }
