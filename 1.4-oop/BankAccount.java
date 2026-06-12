@@ -41,7 +41,7 @@ public class BankAccount {
             System.out.println("Error: the deposit amount couldn't be less than or equal to 0");
         } else {
             balance += amount;
-            System.out.println("Successful deposit");
+            System.out.printf("Successful deposit in the account: %d \n", getAccountNumber());
             System.out.printf("Your new balance is $%.2f \n", getBalance());
         }
     }
@@ -54,7 +54,7 @@ public class BankAccount {
             System.out.println("Error: the deposit amount couldn't be equal to 0");
         } else {
             balance -= amount;
-            System.out.println("Successful withdraw");
+            System.out.printf("Successful withdraw in the account: %d \n", getAccountNumber());
             System.out.printf("Your new balance is $%.2f \n", getBalance());
             }
         }
@@ -62,6 +62,6 @@ public class BankAccount {
 
     /* Declare printBalance method */
     public void printBalance (){
-        System.out.printf("Your balance is $%.2f \n", getBalance());
+        System.out.printf("Your balance in the account %d is $%.2f \n", getAccountNumber(), getBalance());
     }
 }
