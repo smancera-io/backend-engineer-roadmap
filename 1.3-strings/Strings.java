@@ -68,8 +68,10 @@ public class Strings {
             }
         }
  
+        /* Close scanner */
         scanner.close();
 
+        /* Convert StringBuilder to normal String and print it */
         String resultado = words.toString();
         System.out.println(resultado);
     }
