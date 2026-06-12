@@ -31,9 +31,6 @@ public class BankAccount {
     public void setOwner (String owner) {
         this.owner = owner;
     }
-    public void setBalance (double balance) {
-        this.balance = balance;
-    }
     public long setAccountNumber () {
         this.accountNumber = (long) (Math.random() * 1000000000) + 1;
         return accountNumber;
