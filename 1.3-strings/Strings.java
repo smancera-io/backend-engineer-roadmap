@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Strings {
 
     public static void main(String[] args) {
@@ -46,5 +48,29 @@ public class Strings {
         /* Use format */
         String formatPhrase = String.format("El dia de hoy compre un %s.", lowerCase);
         System.out.println(formatPhrase);
+
+        /* Use stringbuilder */
+        StringBuilder words = new StringBuilder();
+
+        /* Inicialize scanner */
+        Scanner scanner = new Scanner(System.in);
+
+        /* Add values to the stringbuilder */
+        boolean flag = true;
+        while (flag){
+            System.out.print("Ingresa una palabra: ");
+            words.append(scanner.nextLine());
+            String letter = "";
+            System.out.print("Deseas agregar otra? (S/N): ");
+            letter = scanner.nextLine().toLowerCase();
+            if (letter.equals("n")){
+                flag = false;
+            }
+        }
+ 
+        scanner.close();
+
+        String resultado = words.toString();
+        System.out.println(resultado);
     }
 }
