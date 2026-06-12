@@ -22,4 +22,12 @@ public class BankAccount {
     public double getBalance () {
         return balance;
     }
+
+    /* Declare setter methods */
+    public void setOwner (String owner) {
+        this.owner = owner;
+    }
+    public void setBalance (double balance) {
+        this.balance = balance;
+    }
 }
