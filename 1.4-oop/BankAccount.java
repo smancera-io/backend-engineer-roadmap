@@ -1,6 +1,7 @@
 public class BankAccount {
 
-    public static void main(String[] args) {
-        
-    }
+    /* Add attributes */
+    private String owner;
+    private long accountNumber;
+    private double balance;
 }
