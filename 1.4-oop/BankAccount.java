@@ -42,7 +42,7 @@ public class BankAccount {
         } else {
             balance += amount;
             System.out.println("Successful deposit");
-            System.out.printf("Your new balance is $%.2d", balance);
+            System.out.printf("Your new balance is $%.2f", getBalance());
         }
     }
 }
