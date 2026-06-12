@@ -15,9 +15,13 @@ public class Strings {
         because '==' with strings compare their memory directions, 
         and equals their value */
 
+        /* Create string phrase */
         String phrase = "Learning java fundamentals and using git control version";
 
+        /* Use split method */
         String [] characters = phrase.split(" ");
+
+        /* Print split result */
         for (String s: characters) {
             System.out.println(s);
         }
