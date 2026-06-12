@@ -5,11 +5,15 @@ public class BankAccount {
     private long accountNumber;
     private double balance;
 
+    /* Add a static attribute */
+    static int accountCounter = 0;
+
     /* Create constructor */
     public BankAccount (String owner, double balance){
         this.owner = owner;
         this.accountNumber = setAccountNumber();
         this.balance = balance;
+        accountCounter ++;
     }
 
     /* Declare getter methods */
