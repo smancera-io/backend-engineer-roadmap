@@ -18,7 +18,7 @@ public class Strings {
         and equals their value */
 
         /* Create string phrase */
-        String phrase = "Learning java fundamentals and using git control version";
+        String phrase = "     Learning java fundamentals and using git control version";
 
         /* Use split method */
         String [] characters = phrase.split(" ");
