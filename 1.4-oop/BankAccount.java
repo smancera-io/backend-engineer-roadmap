@@ -45,4 +45,18 @@ public class BankAccount {
             System.out.printf("Your new balance is $%.2f", getBalance());
         }
     }
+
+    /* Declare withdraw method */
+    public void withdraw (double amount) {
+        if ( amount > getBalance()){
+            System.out.println("Error: You don't have enough balance");
+        } else { if (amount == 0){
+            System.out.println("Error: the deposit amount couldn't be equal to 0");
+        } else {
+            balance -= amount;
+            System.out.println("Successful withdraw");
+            System.out.printf("Your new balance is $%.2f", getBalance());
+            }
+        }
+    }
 }
