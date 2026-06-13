@@ -18,7 +18,7 @@ public class Main {
         bankAccount2.withdraw(2000); // Use in a correct way
 
         /* Use the static attribute */
-        System.out.println(BankAccount.accountCounter);
+        System.out.println(BankAccount.getAccountCounter());
 
     }
 }
