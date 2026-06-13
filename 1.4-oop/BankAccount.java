@@ -26,7 +26,7 @@ public class BankAccount {
     public double getBalance () {
         return balance;
     }
-    public int getAccountCounter () {
+    public static int getAccountCounter () {
         return accountCounter;
     }
 
