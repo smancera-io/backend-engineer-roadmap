@@ -6,7 +6,7 @@ public class BankAccount {
     private double balance;
 
     /* Add a static attribute */
-    static int accountCounter = 0;
+    private static int accountCounter = 0;
 
     /* Create constructor */
     public BankAccount (String owner, double balance){
@@ -25,6 +25,9 @@ public class BankAccount {
     }
     public double getBalance () {
         return balance;
+    }
+    public int getAccountCounter () {
+        return accountCounter;
     }
 
     /* Declare setter methods */
