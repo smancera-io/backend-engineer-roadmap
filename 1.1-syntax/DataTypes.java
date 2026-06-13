@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class DataTypes {
     public static void main(String[] args) {
 
         /* Inizialize 8 variables */
