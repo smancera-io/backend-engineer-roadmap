@@ -54,8 +54,8 @@ public class BankAccount {
     public void withdraw (double amount) {
         if ( amount > getBalance()){
             System.out.println("Error: You don't have enough balance");
-        } else { if (amount == 0){
-            System.out.println("Error: the deposit amount couldn't be equal to 0");
+        } else { if (amount <= 0){
+            System.out.println("Error: the deposit amount couldn't be less than equal to 0");
         } else {
             balance -= amount;
             System.out.printf("Successful withdraw in the account: %d \n", getAccountNumber());
