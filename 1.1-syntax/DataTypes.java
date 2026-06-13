@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class DataTypes {
     public static void main(String[] args) {
 
         /* Inizialize 8 variables */
@@ -61,5 +61,18 @@ public class Main {
         List <Integer> numbers = new ArrayList<>();
         /* Java transform the primitive data type into its 'Wrapper' class (Integer) */
         numbers.add(5); 
+
+        /* Print all variables */
+        System.out.println(number1);
+        System.out.println(number2);
+        System.out.println(number3);
+        System.out.println(number4);
+        System.out.println(number5);
+        System.out.println(number6);
+        System.out.println(letter);
+        System.out.println(flag);
+        System.out.println(data1);
+        System.out.println(data2);
+        System.out.println(data3);
     }
 }
