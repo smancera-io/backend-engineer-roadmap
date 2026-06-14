@@ -17,6 +17,6 @@ public class Desarrollador extends Empleado {
     /* Apply override to the father's method */
     @Override
     public double calculateSalary () {
-        return salary + degreeBonus;
+        return salary + (degreeBonus * 1.5);
     }
 }
