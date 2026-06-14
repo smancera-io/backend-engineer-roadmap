@@ -27,6 +27,11 @@ public class Main {
         empleados.add(desarrollador5);
 
         for (Empleado empleado : empleados) {
+            if (empleado.getID() == 9){
+                if (empleado instanceof Desarrollador) {
+                    System.out.println("Desarrollador con ID 9");
+                }
+            }
             System.out.println(empleado.calculateSalary());
         }
     }
