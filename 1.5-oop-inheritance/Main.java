@@ -36,12 +36,11 @@ public class Main {
 
         /* Print results of polymorphis */
         for (Empleado empleado : empleados) {
-            if (empleado.getID() == 9){
+            if (empleado.getID() == 10){
                 /* Use instanceof */
                 if (empleado instanceof Desarrollador) {
                     Desarrollador desarrollador9 = (Desarrollador) empleado;
                     System.out.println(desarrollador9.getDegreeBonus());
-                    break;
                 }
             }
             System.out.println(empleado.calculateSalary());
