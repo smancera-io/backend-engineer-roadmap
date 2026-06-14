@@ -19,7 +19,7 @@ public class Empleado {
     public int getID () {
         return ID;
     }
-    public double getSalary () {
+    public double calculateSalary () {
         return salary;
     }
 
