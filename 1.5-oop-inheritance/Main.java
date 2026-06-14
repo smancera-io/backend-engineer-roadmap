@@ -14,5 +14,16 @@ public class Main {
         empleados.add(gerente3);
         empleados.add(gerente4);
         empleados.add(gerente5);
+
+        Desarrollador desarrollador1 = new Desarrollador("David", 6, 8500000, 500000);
+        Desarrollador desarrollador2 = new Desarrollador("Carlos", 7, 6500000, 390000);
+        Desarrollador desarrollador3 = new Desarrollador("Andres", 8, 7000000, 550000);
+        Desarrollador desarrollador4 = new Desarrollador("Kamlio", 9, 5700000, 450000);
+        Desarrollador desarrollador5 = new Desarrollador("Jesus", 10, 8800000, 600000);
+        empleados.add(desarrollador1);
+        empleados.add(desarrollador2);
+        empleados.add(desarrollador3);
+        empleados.add(desarrollador4);
+        empleados.add(desarrollador5);
     }
 }
