@@ -10,4 +10,9 @@ public class Gerente extends Empleado {
     public double getManageBonus () {
         return manageBonus;
     }
+
+    @Override
+    public double calculateSalary () {
+        return salary + manageBonus;
+    }
 }

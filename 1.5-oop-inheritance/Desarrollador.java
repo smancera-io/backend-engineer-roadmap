@@ -10,4 +10,9 @@ public class Desarrollador extends Empleado {
     public double getDegreeBonus () {
         return degreeBonus;
     }
+
+    @Override
+    public double calculateSalary () {
+        return salary + degreeBonus;
+    }
 }
