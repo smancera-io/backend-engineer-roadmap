@@ -39,7 +39,9 @@ public class Main {
             if (empleado.getID() == 9){
                 /* Use instanceof */
                 if (empleado instanceof Desarrollador) {
-                    System.out.println("Desarrollador con ID 9");
+                    Desarrollador desarrollador9 = (Desarrollador) empleado;
+                    System.out.println(desarrollador9.getDegreeBonus());
+                    break;
                 }
             }
             System.out.println(empleado.calculateSalary());
