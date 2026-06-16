@@ -4,7 +4,7 @@ import java.util.List;
 public class Equipo {
 
     /* Inicialize empleados List */
-    List <Empleado> empleados = new ArrayList<>();
+    private List <Empleado> empleados = new ArrayList<>();
 
     /* Create method to add instances to the list */
     public void addEmpleados (Empleado empleado) {
