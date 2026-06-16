@@ -1,4 +1,4 @@
-public class Desarrollador extends Empleado {
+public class Desarrollador extends Empleado implements Evaluable, Capacitable {
     
     /* Add new class attribute */
     private double degreeBonus;
