@@ -2,6 +2,7 @@ public class Desarrollador extends Empleado implements Evaluable, Capacitable {
     
     /* Add new class attribute */
     private double degreeBonus;
+    private String curso;
 
     /* Create super constructor method*/
     public Desarrollador (String name, int ID, double salary, double degreeBonus) {
@@ -13,6 +14,9 @@ public class Desarrollador extends Empleado implements Evaluable, Capacitable {
     public double getDegreeBonus () {
         return degreeBonus;
     }
+    public String getCurso() {
+        return curso;
+    }
 
     /* Apply override to the father's method */
     @Override
@@ -21,8 +25,21 @@ public class Desarrollador extends Empleado implements Evaluable, Capacitable {
     }
 
     @Override
-    public void asignarCurso(String curso) {
-        
+    public void asignarCurso(int indentifier) {
+        switch (indentifier) {
+            case 1:
+                curso = "Opp degree";
+                break;
+            case 2:
+                curso = "Python degree";
+                break;
+            case 3:
+                curso = "Spring boot degree";
+                break;
+            default:
+                System.out.println("Curso no encontrado");
+                break;
+        }
     }
 
     @Override

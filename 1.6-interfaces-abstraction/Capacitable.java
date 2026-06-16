@@ -1,5 +1,5 @@
 interface Capacitable {
 
-    void asignarCurso (String curso);
+    void asignarCurso (int identifier);
     
 }
