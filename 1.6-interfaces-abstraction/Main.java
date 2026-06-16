@@ -36,5 +36,7 @@ public class Main {
 
         /* Print results of polymorphis */
         equipo.calculateSingleSalaries();
+
+        equipo.calculateEntireSalaries();
     }
 }
