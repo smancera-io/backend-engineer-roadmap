@@ -1,4 +1,4 @@
-public class Empleado {
+public abstract class Empleado {
 
     /* Initialize attributes */
     protected String name;
@@ -19,9 +19,9 @@ public class Empleado {
     public int getID () {
         return ID;
     }
-    public double calculateSalary () {
-        return salary;
-    }
+
+    /* Modify and create abstract method */
+    public abstract double calculateSalary ();
 
     /* Create setter methods */
     public void setName (String name){
