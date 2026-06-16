@@ -30,12 +30,15 @@ public class Desarrollador extends Empleado implements Evaluable, Capacitable {
         switch (indentifier) {
             case 1:
                 curso = "Opp degree";
+                System.out.println("Curso oop asignado");
                 break;
             case 2:
                 curso = "Python degree";
+                System.out.println("Curso python asignado");
                 break;
             case 3:
                 curso = "Spring boot degree";
+                System.out.println("Curso spring boot asignado");
                 break;
             default:
                 System.out.println("Curso no encontrado");
