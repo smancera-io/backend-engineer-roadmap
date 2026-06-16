@@ -1,6 +1,6 @@
 public class Desarrollador extends Empleado implements Evaluable, Capacitable {
     
-    /* Add new class attribute */
+    /* Add new class attributes */
     private double degreeBonus;
     private String curso;
 
@@ -24,6 +24,7 @@ public class Desarrollador extends Empleado implements Evaluable, Capacitable {
         return salary + (degreeBonus * 1.5);
     }
 
+    /* Implement a new method from interface capacitable */
     @Override
     public void asignarCurso(int indentifier) {
         switch (indentifier) {
@@ -42,6 +43,7 @@ public class Desarrollador extends Empleado implements Evaluable, Capacitable {
         }
     }
 
+    /* Implement a new method from interface Evaluable */
     @Override
     public String evaluarDesempeño() {
         String message = "";

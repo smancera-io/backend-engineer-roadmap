@@ -20,6 +20,7 @@ public class Gerente extends Empleado implements Evaluable {
         return salary + manageBonus;
     }
 
+    /* Implement a new method from interface Evaluable */
     @Override
     public String evaluarDesempeño() {
         String message = "";

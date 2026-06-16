@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        /* Create empleados List */
+        /* Create Equipo instance */
         Equipo equipo = new Equipo();
 
         /* Initialize gerente objects */
@@ -10,7 +10,7 @@ public class Main {
         Gerente gerente4 = new Gerente("Nicolas", 4, 2700000, 450000);
         Gerente gerente5 = new Gerente("Juan", 5, 3800000, 600000);
 
-        /* Add gerente objects to empleados List */
+        /* Use addEmpleados method in order to add gerente objects in empleados list */
         equipo.addEmpleados(gerente1);
         equipo.addEmpleados(gerente2);
         equipo.addEmpleados(gerente3);
@@ -24,16 +24,17 @@ public class Main {
         Desarrollador desarrollador4 = new Desarrollador("Kamlio", 9, 2700000, 450000);
         Desarrollador desarrollador5 = new Desarrollador("Jesus", 10, 3800000, 600000);
 
-        /* Add desarrollador objects to empleados list */
+        /* Use addEmpleados method in order to add desarrollador objects in empleados list */
         equipo.addEmpleados(desarrollador1);
         equipo.addEmpleados(desarrollador2);
         equipo.addEmpleados(desarrollador3);
         equipo.addEmpleados(desarrollador4);
         equipo.addEmpleados(desarrollador5);
 
-        /* Print results of polymorphis */
+        /* Use method for printing each salary */
         equipo.calculateSingleSalaries();
 
+        /* Use method for printing the total cost of salaries */
         equipo.calculateEntireSalaries();
     }
 }
