@@ -16,4 +16,17 @@ public class Equipo {
         }
         System.out.println(totalSalaries);
     }
+
+    public void calculateSingleSalaries () {
+        for (Empleado empleado : empleados) {
+            if (empleado.getID() == 10){
+                /* Use instanceof */
+                if (empleado instanceof Desarrollador) {
+                    Desarrollador desarrollador9 = (Desarrollador) empleado;
+                    System.out.println(desarrollador9.getDegreeBonus());
+                }
+            }
+            System.out.println(empleado.calculateSalary());
+        }
+    }
 }
