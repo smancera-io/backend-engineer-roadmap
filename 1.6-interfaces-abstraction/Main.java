@@ -36,5 +36,10 @@ public class Main {
 
         /* Use method for printing the total cost of salaries */
         equipo.calculateEntireSalaries();
+
+        /* Use interfaces methods */
+        desarrollador1.asignarCurso(2);
+        desarrollador1.evaluarDesempeño();
+        gerente1.evaluarDesempeño();
     }
 }
