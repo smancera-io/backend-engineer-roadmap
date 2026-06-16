@@ -19,4 +19,21 @@ public class Desarrollador extends Empleado implements Evaluable, Capacitable {
     public double calculateSalary () {
         return salary + (degreeBonus * 1.5);
     }
+
+    @Override
+    public void asignarCurso(String curso) {
+        
+    }
+
+    @Override
+    public String evaluarDesempeño() {
+        String message = "";
+        if (salary / degreeBonus > 6){
+            message = "Excelent performance you have obtained an extra bonus";
+            salary += 200000;
+        } else {
+            message = "Good performance, keep working on your abilities";
+        }
+        return message;
+    }
 }

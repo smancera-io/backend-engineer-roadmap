@@ -1,3 +1,4 @@
 interface Evaluable {
     
+    String evaluarDesempeño();
 }
