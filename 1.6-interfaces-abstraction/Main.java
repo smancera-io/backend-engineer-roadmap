@@ -39,7 +39,7 @@ public class Main {
 
         /* Use interfaces methods */
         desarrollador1.asignarCurso(2);
-        desarrollador1.evaluarDesempeño();
-        gerente1.evaluarDesempeño();
+        System.out.println(desarrollador1.evaluarDesempeño());
+        System.out.println(gerente1.evaluarDesempeño());
     }
 }
