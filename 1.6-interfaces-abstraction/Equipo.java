@@ -17,7 +17,7 @@ public class Equipo {
         for (Empleado empleado : empleados) {
             totalSalaries += empleado.calculateSalary();
         }
-        System.out.println(totalSalaries);
+        System.out.printf("El total de la nomina es de: $%.2f \n",totalSalaries);
     }
 
     /* Create method to calculate and print each salary */
