@@ -13,4 +13,18 @@ class Persona {
         this.email = email;
         this.age = age;
     }
+
+    /* Create getter methods */
+    public String getName () {
+        return name;
+    }
+    public long getPhoneNumber () {
+        return phoneNumber;
+    }
+    public String getEmail () {
+        return email;
+    }
+    public int getAge () {
+        return age;
+    }
 }
