@@ -27,4 +27,18 @@ class Persona {
     public int getAge () {
         return age;
     }
+
+    /* Create setter methods */
+    public void setName (String name) {
+        this.name = name;
+    }
+    public void setPhoneNumber (long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    public void setEmail (String email) {
+        this.email =email;
+    }
+    public void setAge (int age) {
+        this.age = age;
+    }
 }
