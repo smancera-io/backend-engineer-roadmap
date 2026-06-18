@@ -1,4 +1,4 @@
-class Persona {
+class Persona implements Comparable {
 
     /* Create attributes */
     private String name;
@@ -40,5 +40,9 @@ class Persona {
     }
     public void setAge (int age) {
         this.age = age;
+    }
+
+    public void compareTo(Persona persona){
+        this.name.compareTo(persona.name);
     }
 }
