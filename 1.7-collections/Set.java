@@ -35,7 +35,9 @@ public class Set {
         personasLinkedHash.add(new Persona("David", 3132599677L, "david@gmail.com", 32));
         personasLinkedHash.add(new Persona("Carlos", 3102554190L, "carlos@gmail.com", 48));
 
-
-
+        /* Add a duplicate value */
+        personasHash.add(new Persona("Samuel", 3229884569L, "samuel@gmail.com", 15));
+        personasTree.add(new Persona("Samuel", 3229884569L, "samuel@gmail.com", 15));
+        personasLinkedHash.add(new Persona("Samuel", 3229884569L, "samuel@gmail.com", 15));
     }
 }
