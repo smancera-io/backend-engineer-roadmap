@@ -39,5 +39,10 @@ public class Set {
         personasHash.add(new Persona("Samuel", 3229884569L, "samuel@gmail.com", 15));
         personasTree.add(new Persona("Samuel", 3229884569L, "samuel@gmail.com", 15));
         personasLinkedHash.add(new Persona("Samuel", 3229884569L, "samuel@gmail.com", 15));
+
+        /* Print data structures */
+        System.out.println("HashSet: " + personasHash);
+        System.out.println("TreeSet: " + personasTree);
+        System.out.println("LinkedHashSet: " + personasLinkedHash);
     }
 }
