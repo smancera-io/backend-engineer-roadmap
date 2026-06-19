@@ -44,7 +44,7 @@ class Persona implements Comparable <Persona> {
 
     @Override
     public String toString() {
-        return "Persona [name=" + name + ", phoneNumber=" + phoneNumber + ", email=" + email + ", age=" + age + "]";
+        return "Name: " + name + ", Phone number: " + phoneNumber + ", Email: " + email + ", Age : " + age + "\n";
     }
 
     /* Create getter methods */
