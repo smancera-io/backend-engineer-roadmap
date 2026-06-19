@@ -1,3 +1,3 @@
 public interface Comparable {
-    void compareTo (Persona persona);
+    int compareTo (Persona persona);
 }

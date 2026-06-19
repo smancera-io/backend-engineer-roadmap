@@ -42,7 +42,7 @@ class Persona implements Comparable {
         this.age = age;
     }
 
-    public void compareTo(Persona persona){
-        this.name.compareTo(persona.name);
+    public int compareTo(Persona persona){
+        return this.name.compareTo(persona.name);
     }
 }
