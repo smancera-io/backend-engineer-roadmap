@@ -14,6 +14,7 @@ class Persona implements Comparable <Persona> {
         this.age = age;
     }
 
+    /* Modify hashCode method to recognize values better */
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -23,6 +24,7 @@ class Persona implements Comparable <Persona> {
         return result;
     }
 
+    /* Modify equals method to prevent and confirm duplicate values */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -42,6 +44,7 @@ class Persona implements Comparable <Persona> {
         return true;
     }
 
+    /* Modify toString method to improve output object */
     @Override
     public String toString() {
         return "Name: " + name + ", Phone number: " + phoneNumber + ", Email: " + email + ", Age : " + age + "\n";
@@ -75,6 +78,7 @@ class Persona implements Comparable <Persona> {
         this.age = age;
     }
 
+    /* Modify compareTo method to use TreeSet collection */
     @Override
     public int compareTo(Persona persona){
         return this.name.compareTo(persona.name);
