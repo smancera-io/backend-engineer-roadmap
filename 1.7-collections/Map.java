@@ -13,12 +13,12 @@ public class Map {
         /* Split string phrase into an array */
         String[] pieces = phrase.split(" ");
 
-        /* Add keys and values to frequency HashMap */
+        /* For loop to count the frecuency */
         for (String piece : pieces) {
             frequency.put(piece, frequency.getOrDefault(piece, 0) + 1);
         }
 
-        /* Print result */
+        /* For loop to print the results using entrySet() */
         for (Entry <String, Integer> pair : frequency.entrySet()) {
             System.out.println("Palabra: '" + pair.getKey() + "' se repite: " + pair.getValue() + " veces.");
         }
