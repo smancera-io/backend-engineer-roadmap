@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class Map {
     public static void main(String[] args) {
@@ -18,6 +19,8 @@ public class Map {
         }
 
         /* Print result */
-        System.out.println(frequency);
+        for (Entry <String, Integer> pair : frequency.entrySet()) {
+            System.out.println("Palabra: '" + pair.getKey() + "' se repite: " + pair.getValue() + " veces.");
+        }
     }
 }
