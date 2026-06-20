@@ -14,7 +14,7 @@ public class Map {
 
         /* Add keys and values to frequency HashMap */
         for (String piece : pieces) {
-            frequency.merge(piece, 1, Integer::sum);
+            frequency.put(piece, frequency.getOrDefault(piece, 0) + 1);
         }
 
         /* Print result */
