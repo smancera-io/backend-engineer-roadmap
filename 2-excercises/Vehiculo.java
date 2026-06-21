@@ -1,3 +1,5 @@
+import java.time.Year;
+
 public abstract class Vehiculo {
 
     protected String placa;
@@ -47,4 +49,9 @@ public abstract class Vehiculo {
     }
 
     public abstract double calcularCostoMantenimiento ();
+
+    public int calcularAntiguedad () {
+        int antiguedad = Year.now().getValue() - añoFabricacion;
+        return antiguedad;
+    }
 }
