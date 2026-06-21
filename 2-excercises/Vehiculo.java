@@ -1,4 +1,4 @@
-public class Vehiculo {
+public abstract class Vehiculo {
 
     protected String placa;
     protected String marca;
@@ -45,4 +45,6 @@ public class Vehiculo {
     public void setKilometraje (double kilometraje) {
         this.kilometraje = kilometraje;
     }
+
+    public abstract double calcularCostoMantenimiento ();
 }
