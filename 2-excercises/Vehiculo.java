@@ -29,4 +29,20 @@ public class Vehiculo {
     public double getKilometraje () {
         return kilometraje;
     }
+
+    public void setPlaca (String placa) {
+        this.placa = placa;
+    }
+    public void setMarca (String marca) {
+        this.marca = marca;
+    }
+    public void setModelo (String modelo) {
+        this.modelo = modelo;
+    }
+    public void setAñoFabricacion (int añoFabricacion) {
+        this.añoFabricacion = añoFabricacion;
+    }
+    public void setKilometraje (double kilometraje) {
+        this.kilometraje = kilometraje;
+    }
 }
