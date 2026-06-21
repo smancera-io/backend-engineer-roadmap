@@ -48,7 +48,7 @@ public abstract class Vehiculo {
         this.kilometraje = kilometraje;
     }
 
-    public abstract double calcularCostoMantenimiento ();
+    public abstract double calcularCostoMantenimiento (double costoAceite, double costoFiltro, double manoObra);
 
     public int calcularAntiguedad () {
         int antiguedad = Year.now().getValue() - añoFabricacion;
