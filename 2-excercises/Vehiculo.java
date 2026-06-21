@@ -13,4 +13,20 @@ public class Vehiculo {
         this.añoFabricacion =  añoFabricacion;
         this.kilometraje = kilometraje;
     }
+
+    public String getPlaca () {
+        return placa;
+    }
+    public String getMarca () {
+        return marca;
+    }
+    public String getModelo () {
+        return modelo;
+    }
+    public int getAñoFabricacion () {
+        return añoFabricacion;
+    }
+    public double getKilometraje () {
+        return kilometraje;
+    }
 }
