@@ -1,13 +1,16 @@
 public class Motocicleta extends Vehiculo {
 
+    /* New class attribute */
     private double cilindraje;
 
+    /* Superconstructor method */
     public Motocicleta(String placa, String marca, String modelo, int añoFabricacion, double kilometraje, double cilindraje) {
         super(placa, marca, modelo, añoFabricacion, kilometraje);
         this.cilindraje = cilindraje;
         
     }
 
+    /* Inherited method */
     @Override
     public double calcularCostoMantenimiento(double precioAceite, double precioFiltro, double manoObra) {
         double costo = 0;
@@ -20,9 +23,11 @@ public class Motocicleta extends Vehiculo {
         }
     }
     
+    /* Setter method */
     public void setCilindraje ( double cilindraje) {
         this.cilindraje = cilindraje;
     }
+    /* Getter method */
     public double getCilindraje () {
         return cilindraje;
     }
