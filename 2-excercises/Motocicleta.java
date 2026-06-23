@@ -20,4 +20,10 @@ public class Motocicleta extends Vehiculo {
         }
     }
     
+    public void setCilindraje ( double cilindraje) {
+        this.cilindraje = cilindraje;
+    }
+    public double getCilindraje () {
+        return cilindraje;
+    }
 }

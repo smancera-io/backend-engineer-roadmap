@@ -12,5 +12,11 @@ public class Camion extends Vehiculo {
         double costo = (precioAceite + precioAceite + manoObra) * (capacidadCarga * 0.5);
         return costo;
     }
-    
+
+    public void setCapacidadCarga (double capacidadCarga) {
+        this.capacidadCarga = capacidadCarga;
+    }
+    public double getCapacidadCarga () {
+        return capacidadCarga;
+    }
 }
