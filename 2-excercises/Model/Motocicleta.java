@@ -1,5 +1,8 @@
 package Model;
-public class Motocicleta extends Vehiculo {
+
+import Interface.Asegurable;
+
+public class Motocicleta extends Vehiculo implements Asegurable{
 
     /* New class attribute */
     private double cilindraje;
@@ -31,5 +34,17 @@ public class Motocicleta extends Vehiculo {
     /* Getter method */
     public double getCilindraje () {
         return cilindraje;
+    }
+
+    @Override
+    public double calcularPrimaSeguro() {
+        int n = (int) cilindraje / 100;
+        double primaSeguro = switch (n) {
+            case 1, 2, 3 -> 150000;
+            case 4, 5, 6, 7 -> 250000;
+            case 8, 9, 10 -> 500000;
+            default -> 20000;
+        };
+    return primaSeguro * 1.05;
     }
 }
