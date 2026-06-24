@@ -1,3 +1,4 @@
+package Model;
 public class Camion extends Vehiculo {
 
     /* New class attribute */
@@ -20,7 +21,7 @@ public class Camion extends Vehiculo {
     public void setCapacidadCarga (double capacidadCarga) {
         this.capacidadCarga = capacidadCarga;
     }
-    
+
     /* Getter method */
     public double getCapacidadCarga () {
         return capacidadCarga;

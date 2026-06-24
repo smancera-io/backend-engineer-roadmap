@@ -1,3 +1,4 @@
+package Model;
 public class Motocicleta extends Vehiculo {
 
     /* New class attribute */

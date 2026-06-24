@@ -1,3 +1,4 @@
+package Model;
 public class Automovil extends Vehiculo{
 
     /* Superconstructor method */
