@@ -1,10 +1,14 @@
 package Interface;
 
+/* Import necessary to work with LocalDate */
 import java.time.LocalDate;
 
 public interface Inspeccionable {
+
+    /* Interface method */
     public boolean realizarInspeccion ();
 
+    /* Default method interface */
     public default String generarCertificado () {
         boolean aprobado = realizarInspeccion();
         String estado = aprobado ? "APROBADO" : "RECHAZADO";
