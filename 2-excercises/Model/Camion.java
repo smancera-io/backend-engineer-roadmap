@@ -30,6 +30,7 @@ public class Camion extends Vehiculo implements Asegurable{
         return capacidadCarga;
     }
 
+    /* Asegurable interface method */
     @Override
     public double calcularPrimaSeguro() {
         int n = (int) capacidadCarga / 2;
