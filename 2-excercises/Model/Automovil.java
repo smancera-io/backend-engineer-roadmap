@@ -1,10 +1,13 @@
 package Model;
-public class Automovil extends Vehiculo{
+
+import Interface.Asegurable;
+
+public class Automovil extends Vehiculo implements Asegurable {
 
     /* Superconstructor method */
     public Automovil(String placa, String marca, String modelo, int añoFabricacion, double kilometraje) {
         super(placa, marca, modelo, añoFabricacion, kilometraje);
-        
+
     }
 
     /* Inherited method */
@@ -13,5 +16,19 @@ public class Automovil extends Vehiculo{
         double costo = (costoAceite + costoFiltro + manoObra) * kilometraje / 10000;
         return costo;
     }
-    
-}
+
+    @Override
+    public double calcularPrimaSeguro() {
+        double primaSeguro = 0;
+        if (añoFabricacion >= 1990 && añoFabricacion < 2010) {
+            primaSeguro = 200000;
+        } else if (añoFabricacion >= 2010 && añoFabricacion < 2020) {
+            primaSeguro = 450000;
+        } else if (añoFabricacion >= 2020 && añoFabricacion < 2030) {
+            primaSeguro = 700000;
+        } else {
+            primaSeguro = 20000;
+        }
+        return primaSeguro * 1.25;
+    }
+};
