@@ -36,6 +36,7 @@ public class Motocicleta extends Vehiculo implements Asegurable{
         return cilindraje;
     }
 
+    /* Asegurable interface method */
     @Override
     public double calcularPrimaSeguro() {
         int n = (int) cilindraje / 100;
