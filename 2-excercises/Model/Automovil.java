@@ -17,6 +17,7 @@ public class Automovil extends Vehiculo implements Asegurable {
         return costo;
     }
 
+    /* Asegurable interface method */
     @Override
     public double calcularPrimaSeguro() {
         double primaSeguro = 0;
