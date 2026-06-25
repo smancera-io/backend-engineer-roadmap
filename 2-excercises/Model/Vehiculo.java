@@ -1,5 +1,6 @@
 package Model;
 import java.time.Year;
+import java.util.Objects;
 
 import ENUM.EstadoVehiculo;
 import Exception.KilometrajeInvalidoException;
@@ -77,5 +78,13 @@ public abstract class Vehiculo {
     public int calcularAntiguedad () {
         int antiguedad = Year.now().getValue() - añoFabricacion;
         return antiguedad;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Vehiculo)) return false;
+        Vehiculo other = (Vehiculo) o;
+        return Objects.equals(placa, other.placa);
     }
 }
