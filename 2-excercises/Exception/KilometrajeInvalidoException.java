@@ -1,5 +1,7 @@
 package Exception;
 
-public class KilometrajeInvalidoException {
-    
+public class KilometrajeInvalidoException extends RuntimeException{
+    public KilometrajeInvalidoException(String message) {
+        super(message);
+    }
 }
