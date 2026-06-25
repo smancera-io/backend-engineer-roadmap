@@ -5,7 +5,7 @@ import java.util.Objects;
 import ENUM.EstadoVehiculo;
 import Exception.KilometrajeInvalidoException;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Comparable<Vehiculo> {
 
     /* Class attributes */
     protected String placa;
@@ -72,7 +72,7 @@ public abstract class Vehiculo {
     }
 
     /* Abtract method */
-    public abstract double calcularCostoMantenimiento (double costoAceite, double costoFiltro, double manoObra);
+    public abstract double calcularCostoMantenimiento ();
 
     /* Share method */
     public int calcularAntiguedad () {
@@ -91,5 +91,14 @@ public abstract class Vehiculo {
     @Override
     public int hashCode() {
         return Objects.hash(placa);
+    }
+
+    @Override
+    public int compareTo(Vehiculo other) {
+        int cmp = Double.compare(
+            other.calcularCostoMantenimiento(),
+            this.calcularCostoMantenimiento()   // desc: mayor costo = "menor" en TreeSet
+        );
+        return (cmp != 0) ? cmp : this.placa.compareTo(other.placa);
     }
 }
