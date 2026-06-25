@@ -53,13 +53,6 @@ public class Camion extends Vehiculo implements Asegurable{
     /* Asegurable interface method */
     @Override
     public double calcularPrimaSeguro() {
-        int n = (int) capacidadCarga / 2;
-        double primaSeguro = switch (n) {
-            case 1, 2, 3 -> 250000;
-            case 4, 5, 6, 7 -> 500000;
-            case 8, 9, 10 -> 750000;
-            default -> 20000;
-        };
-    return primaSeguro * 1.25;
+       return (valorComercial * 0.025) + (numeroEjes * 200.0);
     }
 }
