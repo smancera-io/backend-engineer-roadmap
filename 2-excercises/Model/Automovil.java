@@ -36,8 +36,9 @@ public class Automovil extends Vehiculo implements Asegurable {
     /* Inherited method */
     @Override
     public double calcularCostoMantenimiento() {
-        double costo = (costoAceite + costoFiltro + manoObra) * kilometraje / 10000;
-        return costo;
+        return 200.0
+            + (getKilometraje() * 0.05)
+            + (calcularAntiguedad() * 50.0);
     }
 
     /* Asegurable interface method */
