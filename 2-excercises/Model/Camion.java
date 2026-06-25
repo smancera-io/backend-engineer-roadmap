@@ -2,8 +2,9 @@ package Model;
 
 import ENUM.EstadoVehiculo;
 import Interface.Asegurable;
+import Interface.Inspeccionable;
 
-public class Camion extends Vehiculo implements Asegurable{
+public class Camion extends Vehiculo implements Asegurable, Inspeccionable{
 
     /* New class attribute */
     private double capacidadCarga;
@@ -54,5 +55,9 @@ public class Camion extends Vehiculo implements Asegurable{
     @Override
     public double calcularPrimaSeguro() {
        return (valorComercial * 0.025) + (numeroEjes * 200.0);
+    }
+    @Override
+    public boolean realizarInspeccion() {
+        return calcularAntiguedad() < 15 && getKilometraje() < 500_000;
     }
 }
