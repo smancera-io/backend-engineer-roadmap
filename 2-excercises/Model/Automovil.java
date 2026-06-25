@@ -37,23 +37,13 @@ public class Automovil extends Vehiculo implements Asegurable {
     @Override
     public double calcularCostoMantenimiento() {
         return 200.0
-            + (getKilometraje() * 0.05)
-            + (calcularAntiguedad() * 50.0);
+                + (getKilometraje() * 0.05)
+                + (calcularAntiguedad() * 50.0);
     }
 
     /* Asegurable interface method */
     @Override
     public double calcularPrimaSeguro() {
-        double primaSeguro = 0;
-        if (añoFabricacion >= 1990 && añoFabricacion < 2010) {
-            primaSeguro = 200000;
-        } else if (añoFabricacion >= 2010 && añoFabricacion < 2020) {
-            primaSeguro = 450000;
-        } else if (añoFabricacion >= 2020 && añoFabricacion < 2030) {
-            primaSeguro = 700000;
-        } else {
-            primaSeguro = 20000;
-        }
-        return primaSeguro * 1.25;
+        return valorComercial * 0.015;
     }
 };
