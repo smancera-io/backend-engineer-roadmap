@@ -2,6 +2,7 @@ package Model;
 import java.time.Year;
 
 import ENUM.EstadoVehiculo;
+import Exception.KilometrajeInvalidoException;
 
 public abstract class Vehiculo {
 
@@ -57,6 +58,12 @@ public abstract class Vehiculo {
         this.añoFabricacion = añoFabricacion;
     }
     public void setKilometraje (double kilometraje) {
+        if (kilometraje < this.kilometraje) {
+            throw new KilometrajeInvalidoException(String.format(
+                "El kilometraje no puede decrecer. Actual: %.2f | Recibido: %.2f",
+                this.kilometraje, kilometraje
+            ));
+        }
         this.kilometraje = kilometraje;
     }
     public void setEstado (EstadoVehiculo estado) {
