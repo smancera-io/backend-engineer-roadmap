@@ -14,12 +14,13 @@ public abstract class Vehiculo {
     protected EstadoVehiculo estado;
 
     /* Constructor method */
-    public Vehiculo (String placa, String marca, String modelo, int añoFabricacion, double kilometraje){
+    public Vehiculo (String placa, String marca, String modelo, int añoFabricacion, double kilometraje, EstadoVehiculo estado){
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.añoFabricacion =  añoFabricacion;
         this.kilometraje = kilometraje;
+        this.estado = estado;
     }
 
     /* Getter methods*/
@@ -38,6 +39,9 @@ public abstract class Vehiculo {
     public double getKilometraje () {
         return kilometraje;
     }
+    public EstadoVehiculo getEstadoVehiculo () {
+        return estado;
+    }
 
     /* Setter methods */
     public void setPlaca (String placa) {
@@ -54,6 +58,9 @@ public abstract class Vehiculo {
     }
     public void setKilometraje (double kilometraje) {
         this.kilometraje = kilometraje;
+    }
+    public void setEstado (EstadoVehiculo estado) {
+        this.estado = estado;
     }
 
     /* Abtract method */
