@@ -1,6 +1,8 @@
 package Model;
 import java.time.Year;
 
+import ENUM.EstadoVehiculo;
+
 public abstract class Vehiculo {
 
     /* Class attributes */
@@ -9,6 +11,7 @@ public abstract class Vehiculo {
     protected String modelo;
     protected int añoFabricacion;
     protected double kilometraje;
+    protected EstadoVehiculo estado;
 
     /* Constructor method */
     public Vehiculo (String placa, String marca, String modelo, int añoFabricacion, double kilometraje){
