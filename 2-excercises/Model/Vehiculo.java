@@ -8,7 +8,7 @@ import Exception.KilometrajeInvalidoException;
 public abstract class Vehiculo implements Comparable<Vehiculo> {
 
     /* Class attributes */
-    protected String placa;
+    protected final String placa;
     protected String marca;
     protected String modelo;
     protected int añoFabricacion;
@@ -17,11 +17,12 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
 
     /* Constructor method */
     public Vehiculo (String placa, String marca, String modelo, int añoFabricacion, double kilometraje, EstadoVehiculo estado){
-        this.placa = placa;
+        this.placa =  Objects.requireNonNull(placa, "La placa no puede ser null");
         this.marca = marca;
         this.modelo = modelo;
         this.añoFabricacion =  añoFabricacion;
-        this.kilometraje = kilometraje;
+        this.kilometraje = 0.0;
+        setKilometraje(kilometraje);
         this.estado = estado;
     }
 
@@ -46,9 +47,6 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
     }
 
     /* Setter methods */
-    public void setPlaca (String placa) {
-        this.placa = placa;
-    }
     public void setMarca (String marca) {
         this.marca = marca;
     }
