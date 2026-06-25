@@ -78,6 +78,7 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         return antiguedad;
     }
 
+    /* Equals method */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -86,11 +87,13 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         return Objects.equals(placa, other.placa);
     }
 
+    /* HashCode method */
     @Override
     public int hashCode() {
         return Objects.hash(placa);
     }
 
+    /* compareTo method */
     @Override
     public int compareTo(Vehiculo other) {
         int cmp = Double.compare(
@@ -100,6 +103,7 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         return (cmp != 0) ? cmp : this.placa.compareTo(other.placa);
     }
 
+    /* toString method */
     @Override
     public String toString() {
         return String.format("[%s] %s %s %d | KM: %.0f | Estado: %-16s | Mantenimiento: $%,.2f",

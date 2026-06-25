@@ -10,16 +10,18 @@ import Interface.Inspeccionable;
 import Model.Vehiculo;
 
 public class GestorFlota {
-
+    /* Create collections */
     private final Map<String, Vehiculo> flota = new HashMap<>();
     private final TreeSet<Vehiculo> flotaOrdenada = new TreeSet<>();
 
+    /* 'Create' method */
     public void agregarVehiculo(Vehiculo vehiculo) {
         Objects.requireNonNull(vehiculo, "El vehículo no puede ser null");
         flota.put(vehiculo.getPlaca(), vehiculo);
         flotaOrdenada.add(vehiculo);
     }
 
+    /* 'Delete' method */
     public void eliminarVehiculo(String placa) throws VehiculoNoEncontradoException {
         Vehiculo v = flota.remove(placa);
         if (v == null)
@@ -27,6 +29,7 @@ public class GestorFlota {
         flotaOrdenada.remove(v);
     }
 
+    /* 'SearchBy' method */
     public Vehiculo buscarPorPlaca(String placa) throws VehiculoNoEncontradoException {
         Vehiculo v = flota.get(placa);
         if (v == null)
@@ -34,11 +37,13 @@ public class GestorFlota {
         return v;
     }
 
+    /* 'Group' method */
     public Map<Class<?>, List<Vehiculo>> agruparPorTipo() {
         return flota.values().stream()
                 .collect(Collectors.groupingBy(Vehiculo::getClass));
     }
 
+    /* 'Count' method */
     public Map<EstadoVehiculo, Long> contarPorEstado() {
         Map<EstadoVehiculo, Long> resultado = new EnumMap<>(EstadoVehiculo.class);
         for (EstadoVehiculo e : EstadoVehiculo.values())
@@ -47,18 +52,21 @@ public class GestorFlota {
         return resultado;
     }
 
+    /* '.stream' method to calculate costs */
     public double calcularCostoTotalFlota() {
         return flota.values().stream()
                 .mapToDouble(Vehiculo::calcularCostoMantenimiento)
                 .sum();
     }
 
+    /* '.stream' method to find costest object */
     public Optional<Vehiculo> vehiculoMayorCosto() {
         return flotaOrdenada.isEmpty()
                 ? Optional.empty()
                 : Optional.of(flotaOrdenada.first());
     }
 
+    /* '.stream' method to get Aegurable functions */
     public List<Asegurable> obtenerAsegurables() {
         return flota.values().stream()
                 .filter(v -> v instanceof Asegurable)
@@ -66,6 +74,7 @@ public class GestorFlota {
                 .collect(Collectors.toList());
     }
 
+    /* '.stream' method to get Inspeccionable functions */
     public List<Inspeccionable> obtenerInspeccionables() {
         return flota.values().stream()
                 .filter(v -> v instanceof Inspeccionable)
@@ -73,6 +82,7 @@ public class GestorFlota {
                 .collect(Collectors.toList());
     }
 
+    /* Print report method */
     public void imprimirReporte() {
         String sep = "=".repeat(70);
         System.out.println(sep);

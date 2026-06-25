@@ -1,6 +1,7 @@
 package ENUM;
 
 public enum EstadoVehiculo {
+    /* Create Enum states */
     ACTIVO {
         @Override
         public boolean puedeOperar() {
@@ -20,5 +21,6 @@ public enum EstadoVehiculo {
         }
     };
 
+    /* Create abstract method */
     public abstract boolean puedeOperar();
 }

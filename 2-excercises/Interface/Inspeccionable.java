@@ -1,6 +1,5 @@
 package Interface;
 
-/* Import necessary to work with LocalDate */
 import java.time.LocalDate;
 
 public interface Inspeccionable {

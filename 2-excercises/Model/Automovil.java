@@ -17,18 +17,18 @@ public class Automovil extends Vehiculo implements Asegurable {
         this.valorComercial = valorComercial;
     }
 
+    /* Getter methods */
     public int getNumeroPuertas() {
         return numeroPuertas;
     }
-
     public double getValorComercial() {
         return valorComercial;
     }
 
+    /* Setter methods */
     public void setNumeroPuertas(int numeroPuertas) {
         this.numeroPuertas = numeroPuertas;
     }
-
     public void setValorComercial(double valorComercial) {
         this.valorComercial = valorComercial;
     }
