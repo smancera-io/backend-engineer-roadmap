@@ -87,4 +87,9 @@ public abstract class Vehiculo {
         Vehiculo other = (Vehiculo) o;
         return Objects.equals(placa, other.placa);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(placa);
+    }
 }
