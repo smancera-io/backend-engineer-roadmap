@@ -16,15 +16,11 @@ public class Motocicleta extends Vehiculo implements Asegurable{
 
     /* Inherited method */
     @Override
-    public double calcularCostoMantenimiento(double precioAceite, double precioFiltro, double manoObra) {
-        double costo = 0;
-        if ( cilindraje <= 250.0){
-            costo = (precioAceite + precioFiltro + manoObra) * 1.7;
-            return costo;
-        } else {
-            costo = (precioAceite + precioFiltro + manoObra) * 2.7;
-            return costo;
-        }
+    public double calcularCostoMantenimiento() {
+        return 80.0
+            + (getKilometraje() * 0.02)
+            + (cilindraje * 0.10)
+            + (calcularAntiguedad() * 20.0);
     }
     
     /* Setter method */
