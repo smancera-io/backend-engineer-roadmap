@@ -101,4 +101,11 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         );
         return (cmp != 0) ? cmp : this.placa.compareTo(other.placa);
     }
+
+    @Override
+    public String toString() {
+        return String.format("[%s] %s %s %d | KM: %.0f | Estado: %-16s | Mantenimiento: $%,.2f",
+            placa, marca, modelo, añoFabricacion,
+            kilometraje, estado, calcularCostoMantenimiento());
+    }
 }
