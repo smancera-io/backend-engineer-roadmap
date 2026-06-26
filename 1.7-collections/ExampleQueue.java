@@ -19,5 +19,9 @@ public class ExampleQueue {
 
         /* Print the first value, showing FIFO function */
         System.out.println(list.peek());
+
+        /* Use 'poll' method to remove some values */
+        list.poll();
+        list.poll();
     }
 }
