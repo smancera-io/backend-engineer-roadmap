@@ -16,6 +16,8 @@ public class ExampleQueue {
 
         /* Print FIFO structure */
         System.out.println(list);
-        
+
+        /* Print the first value, showing FIFO function */
+        System.out.println(list.peek());
     }
 }
