@@ -23,10 +23,12 @@ public class Map {
             System.out.println("Palabra: '" + pair.getKey() + "' se repite: " + pair.getValue() + " veces.");
         }
 
+        /* For loop to print the values */
         for ( Integer value : frequency.values()){
             System.out.println("Numero de repetido " + value);
         }
 
+        /* For loop to print the keys */
         for ( String key : frequency.keySet()) {
             System.out.println("Palabra " + key);
         }
