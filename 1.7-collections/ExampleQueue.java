@@ -13,6 +13,9 @@ public class ExampleQueue {
         list.offer("Daniel");
         list.offer("Sofia");
         list.offer("Laura");
+
+        /* Print FIFO structure */
+        System.out.println(list);
         
     }
 }
