@@ -26,5 +26,9 @@ public class Map {
         for ( Integer value : frequency.values()){
             System.out.println("Numero de repetido " + value);
         }
+
+        for ( String key : frequency.keySet()) {
+            System.out.println("Palabra " + key);
+        }
     }
 }
