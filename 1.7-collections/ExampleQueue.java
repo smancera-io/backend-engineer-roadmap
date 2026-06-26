@@ -23,5 +23,8 @@ public class ExampleQueue {
         /* Use 'poll' method to remove some values */
         list.poll();
         list.poll();
+
+        /* Print the new first value */
+        System.out.println(list.peek());
     }
 }
