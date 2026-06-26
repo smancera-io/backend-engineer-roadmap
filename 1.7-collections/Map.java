@@ -18,7 +18,8 @@ public class Map {
 
         /* For loop to count the frecuency */
         for (String piece : pieces) {
-            frequency.put(piece, frequency.getOrDefault(piece, 0) + 1);
+            frequency.putIfAbsent(piece, frequency.getOrDefault(piece, 0) + 1);
+            frecuencyTree.putIfAbsent(piece, frequency.getOrDefault(piece, 0) + 1);
         }
 
         /* For loop to print the results using entrySet() */
