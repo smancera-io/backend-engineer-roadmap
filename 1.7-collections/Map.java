@@ -27,6 +27,7 @@ public class Map {
             System.out.println("Palabra: '" + pair.getKey() + "' se repite: " + pair.getValue() + " veces.");
         }
 
+        /* For loop to print the results with TreeMap */
         for (Entry <String, Integer> pair : frecuencyTree.entrySet()) {
             System.out.println("Palabra: '" + pair.getKey() + "' se repite: " + pair.getValue() + " veces.");
         }
@@ -36,6 +37,7 @@ public class Map {
             System.out.println("Palabra " + key);
         }
 
+        /* For loop to print keys TreeMap */
         for ( String key : frecuencyTree.keySet()) {
             System.out.println("Palabra " + key);
         }
@@ -45,6 +47,7 @@ public class Map {
             System.out.println("Numero de repetido " + value);
         }
 
+        /* For loop to print values TreeMap */
         for ( Integer value : frecuencyTree.values()){
             System.out.println("Numero de repetido " + value);
         }
