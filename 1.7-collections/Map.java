@@ -22,5 +22,9 @@ public class Map {
         for (Entry <String, Integer> pair : frequency.entrySet()) {
             System.out.println("Palabra: '" + pair.getKey() + "' se repite: " + pair.getValue() + " veces.");
         }
+
+        for ( Integer value : frequency.values()){
+            System.out.println("Numero de repetido " + value);
+        }
     }
 }
