@@ -27,13 +27,25 @@ public class Map {
             System.out.println("Palabra: '" + pair.getKey() + "' se repite: " + pair.getValue() + " veces.");
         }
 
+        for (Entry <String, Integer> pair : frecuencyTree.entrySet()) {
+            System.out.println("Palabra: '" + pair.getKey() + "' se repite: " + pair.getValue() + " veces.");
+        }
+
         /* For loop to print the keys */
         for ( String key : frequency.keySet()) {
             System.out.println("Palabra " + key);
         }
 
+        for ( String key : frecuencyTree.keySet()) {
+            System.out.println("Palabra " + key);
+        }
+
         /* For loop to print the values */
         for ( Integer value : frequency.values()){
+            System.out.println("Numero de repetido " + value);
+        }
+
+        for ( Integer value : frecuencyTree.values()){
             System.out.println("Numero de repetido " + value);
         }
     }
