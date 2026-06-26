@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.TreeMap;
 import java.util.Map.Entry;
 
 public class Map {
@@ -6,6 +7,8 @@ public class Map {
 
         /* Create a HashMap */
         HashMap<String, Integer> frequency = new HashMap<>();
+
+        TreeMap <String, Integer> frecuencyTree =  new TreeMap<>();
 
         /* Initialize a String phrase */
         String phrase = "Juan tuvo un tubo y el tubo que tuvo se le rompió y para recuperar el tubo que tuvo tuvo que comprar un tubo igual al tubo que tuvo y rompió";
