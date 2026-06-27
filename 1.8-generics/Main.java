@@ -28,5 +28,17 @@ public class Main {
         /* Use generic methods from Caja class */
         Caja.printItems(listaNombres);
         System.out.println(Caja.countItems(listaNombres));
+
+        /* Use Caja class with Persona class */
+        List <Persona> personas = new ArrayList<>();
+
+        personas.add(new Persona("Samuel", 3229455210L, "samuel@gmail.com", 19));
+        personas.add(new Persona("Esteban",3299874562L, "esteban@gmail.com", 45));
+        personas.add(new Persona("Juan", 3134896522L, "juan@gmail.com", 8));
+        personas.add(new Persona("David", 3478963201L, "david@gmail.com", 15));
+        personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", 80));
+
+        Caja.printItems(personas);
+        System.out.println(Caja.countItems(personas));
     }
 }
