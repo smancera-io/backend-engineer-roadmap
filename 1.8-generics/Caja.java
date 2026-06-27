@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Caja <T> /* Use generic parameter */ {
+public class Caja<T> /* Use generic parameter */ {
 
     /* Generic variable */
     T item;
@@ -15,14 +15,15 @@ public class Caja <T> /* Use generic parameter */ {
         return item;
     }
 
-    public void printItems (List <T> lista){
+    /* Generic print List items */
+    public void printItems(List<T> lista) {
         for (T object : lista) {
             System.out.println(object);
         }
-
     }
 
-    public int countItems (List <T> lista) {
+    /* Generic count List items */
+    public int countItems(List<T> lista) {
         return lista.size();
     }
 
