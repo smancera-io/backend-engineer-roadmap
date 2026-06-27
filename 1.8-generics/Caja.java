@@ -3,7 +3,7 @@ import java.util.List;
 public class Caja<T> /* Use generic parameter */ {
 
     /* Generic variable */
-    T item;
+    private T item;
 
     /* Generic setter method */
     public void setItem(T item) {
@@ -16,14 +16,14 @@ public class Caja<T> /* Use generic parameter */ {
     }
 
     /* Generic print List items */
-    public void printItems(List<T> lista) {
+    public static <T> void printItems(List<T> lista) {
         for (T object : lista) {
             System.out.println(object);
         }
     }
 
     /* Generic count List items */
-    public int countItems(List<T> lista) {
+    public static <T> int countItems(List <T> lista) {
         return lista.size();
     }
 
