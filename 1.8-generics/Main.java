@@ -25,6 +25,7 @@ public class Main {
         listaNombres.add("Elena");
         listaNombres.add("Lucas");
 
+        /* Use generic methods from Caja class */
         names.printItems(listaNombres);
         System.out.println(names.countItems(listaNombres));
     }
