@@ -1,13 +1,16 @@
-public class Caja <T> {
+public class Caja <T> /* Use generic parameter */ {
 
+    /* Generic variable */
     T item;
 
-    public void setItem (T item) {
+    /* Generic setter method */
+    public void setItem(T item) {
         this.item = item;
     }
 
-    public T getItem () {
+    /* Generic getter method */
+    public T getItem() {
         return item;
     }
-    
+
 }
