@@ -30,6 +30,9 @@ public class Main {
         System.out.println(Caja.countItems(listaNombres));
 
         /* Use Caja class with Persona class */
+        Caja<Persona> persona = new Caja<>();
+        persona.setItem(new Persona("Daniel", 322947889852L, "daniel@gmail.com", 52));
+        System.out.println(persona.getItem());
         List <Persona> personas = new ArrayList<>();
 
         personas.add(new Persona("Samuel", 3229455210L, "samuel@gmail.com", 19));
