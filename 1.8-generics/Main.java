@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         /* Initialize a Caja class with String argument*/
@@ -15,5 +18,14 @@ public class Main {
         /* Print Cajas class values */
         System.out.println(names.getItem());
         System.out.println(numbers.getItem());
+
+        /* Initialize a List  */
+        List<String> listaNombres = new ArrayList<>();
+        listaNombres.add("Samuel");
+        listaNombres.add("Elena");
+        listaNombres.add("Lucas");
+
+        names.printItems(listaNombres);
+
     }
 }
