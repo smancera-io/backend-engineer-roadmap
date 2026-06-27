@@ -26,6 +26,6 @@ public class Main {
         listaNombres.add("Lucas");
 
         names.printItems(listaNombres);
-
+        System.out.println(names.countItems(listaNombres));
     }
 }
