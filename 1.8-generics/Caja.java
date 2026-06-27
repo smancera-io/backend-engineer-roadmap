@@ -22,4 +22,8 @@ public class Caja <T> /* Use generic parameter */ {
 
     }
 
+    public int countItems (List <T> lista) {
+        return lista.size();
+    }
+
 }
