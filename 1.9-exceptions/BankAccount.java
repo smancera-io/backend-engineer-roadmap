@@ -40,7 +40,7 @@ public class BankAccount {
     }
 
     /* Declare deposit method */
-    public void deposit (double amount) throws CantidadNegativaException{
+    public void deposit (double amount) {
         if (amount <= 0){
             throw new CantidadNegativaException("La cantidad ingresada es negativa o igual a 0"); // Use personalized exception
         } else {
@@ -51,7 +51,7 @@ public class BankAccount {
     }
 
     /* Declare withdraw method */
-    public void withdraw (double amount) throws SaldoInsuficienteException, CantidadNegativaException{
+    public void withdraw (double amount) {
         if ( amount > getBalance()){
             throw new SaldoInsuficienteException("Saldo insuficiente para hacer la operacion"); // Use personalized exception
         } else { if (amount <= 0){
