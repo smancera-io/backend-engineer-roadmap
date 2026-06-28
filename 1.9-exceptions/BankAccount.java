@@ -40,9 +40,9 @@ public class BankAccount {
     }
 
     /* Declare deposit method */
-    public void deposit (double amount) {
+    public void deposit (double amount) throws CantidadNegativaException{
         if (amount <= 0){
-            System.out.println("Error: the deposit amount couldn't be less than or equal to 0");
+            throw new CantidadNegativaException();
         } else {
             balance += amount;
             System.out.printf("Successful deposit in the account: %d \n", getAccountNumber());
@@ -51,11 +51,11 @@ public class BankAccount {
     }
 
     /* Declare withdraw method */
-    public void withdraw (double amount) throws SaldoInsuficienteException{
+    public void withdraw (double amount) throws SaldoInsuficienteException, CantidadNegativaException{
         if ( amount > getBalance()){
             throw new SaldoInsuficienteException("Saldo insuficiente para hacer la operacion"); // Use personalized exception
         } else { if (amount <= 0){
-            System.out.println("Error: the withdraw amount couldn't be less than equal to 0");
+            throw new CantidadNegativaException();
         } else {
             balance -= amount;
             System.out.printf("Successful withdraw in the account: %d \n", getAccountNumber());
