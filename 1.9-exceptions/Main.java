@@ -20,6 +20,9 @@ public class Main {
         } catch (SaldoInsuficienteException e) {
             System.out.println("Error:" + e.getMessage());
         }
+        finally{
+            System.out.println("Fin de la sesion");
+        }
 
         /* Use the static attribute */
         System.out.println(BankAccount.getAccountCounter());
