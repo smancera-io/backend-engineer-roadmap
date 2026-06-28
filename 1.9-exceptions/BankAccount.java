@@ -53,7 +53,7 @@ public class BankAccount {
     /* Declare withdraw method */
     public void withdraw (double amount) throws SaldoInsuficienteException{
         if ( amount > getBalance()){
-            throw new SaldoInsuficienteException("Saldo insuficiente para hacer la operacion");
+            throw new SaldoInsuficienteException("Saldo insuficiente para hacer la operacion"); // Use personalized exception
         } else { if (amount <= 0){
             System.out.println("Error: the withdraw amount couldn't be less than equal to 0");
         } else {
