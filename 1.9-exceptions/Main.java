@@ -14,8 +14,12 @@ public class Main {
         bankAccount2.printBalance();
 
         /* Use withdraw method */
+        try {
         bankAccount1.withdraw(5); // Validate enough balance
-        bankAccount2.withdraw(2000); // Use in a correct way
+        bankAccount2.withdraw(2000); }
+        catch (SaldoInsuficienteException e){
+            System.out.println("Error:" + e.getMessage());
+        }
 
         /* Use the static attribute */
         System.out.println(BankAccount.getAccountCounter());
