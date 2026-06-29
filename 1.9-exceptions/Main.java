@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         /* Use try block */
@@ -30,5 +34,14 @@ public class Main {
             System.out.println("Fin de la sesion");
         }
 
+        try (FileReader fileReader = new FileReader("Nombre.txt")) {
+            BufferedReader br = new BufferedReader(fileReader);
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                System.out.println("Línea leída: " + linea);
+            }
+        } catch (IOException e) {
+            System.out.println("Archivo no encontrado");
+        }
     }
 }
