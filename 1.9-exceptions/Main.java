@@ -20,16 +20,17 @@ public class Main {
             bankAccount2.withdraw(2000); // Use in a correct way
 
             /* Add catch and finally blocks */
-        } catch (SaldoInsuficienteException e) {
-            System.out.println("Error:" + e.getMessage());
-        } catch (CantidadNegativaException e) {
-            System.out.println("Error: " + e.getMessage());
+        } catch (SaldoInsuficienteException | CantidadNegativaException e) {
+            if (e instanceof SaldoInsuficienteException) {
+                System.out.println("Error:" + e.getMessage());
+            } else if (e instanceof CantidadNegativaException) {
+                System.out.println("Error: " + e.getMessage());
+            }
         } finally {
             System.out.println("Fin de la sesion");
         }
 
         /* Use the static attribute */
         System.out.println(BankAccount.getAccountCounter());
-
     }
 }
