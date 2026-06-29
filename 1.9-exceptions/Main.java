@@ -30,7 +30,5 @@ public class Main {
             System.out.println("Fin de la sesion");
         }
 
-        /* Use the static attribute */
-        System.out.println(BankAccount.getAccountCounter());
     }
 }
