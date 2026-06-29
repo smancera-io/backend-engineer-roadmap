@@ -12,7 +12,7 @@ public class Main {
             BankAccount bankAccount2 = new BankAccount("samuel", 0);
 
             /* Use deposit method */
-            bankAccount1.deposit(-2); // Validate a logic amount and test handle exception
+            bankAccount1.deposit(2); // Validate a logic amount and test handle exception
             bankAccount2.deposit(2500); // Use in a correct way
 
             /* Use printBalance method */
@@ -25,11 +25,7 @@ public class Main {
 
             /* Add catch and finally blocks */
         } catch (SaldoInsuficienteException | CantidadNegativaException e) {
-            if (e instanceof SaldoInsuficienteException) {
                 System.out.println("Error:" + e.getMessage());
-            } else if (e instanceof CantidadNegativaException) {
-                System.out.println("Error: " + e.getMessage());
-            }
         } finally {
             System.out.println("Fin de la sesion");
         }
