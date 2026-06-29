@@ -34,6 +34,7 @@ public class Main {
             System.out.println("Fin de la sesion");
         }
 
+        /* Try with resources and handle its exception */
         try (FileReader fileReader = new FileReader("Nombre.txt")) {
             BufferedReader br = new BufferedReader(fileReader);
             String linea;
