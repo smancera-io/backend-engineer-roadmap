@@ -35,8 +35,7 @@ public class Main {
         }
 
         /* Try with resources and handle its exception */
-        try (FileReader fileReader = new FileReader("Nombre.txt")) {
-            BufferedReader br = new BufferedReader(fileReader);
+        try (FileReader fileReader = new FileReader("Nombre.txt");BufferedReader br = new BufferedReader(fileReader);) {
             String linea;
             while ((linea = br.readLine()) != null) {
                 System.out.println("Línea leída: " + linea);
