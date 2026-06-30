@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Main
+ */
+public class Main {
+
+    public static void main(String[] args) {
+        List<Persona> personas = new ArrayList<>();
+        personas.add(new Persona("Samuel", 3229455210L, "samuel@gmail.com", 19));
+        personas.add(new Persona("Esteban", 3299874562L, "esteban@gmail.com", 45    ));
+        personas.add(new Persona("Juan", 3134896522L, "juan@gmail.com", 8));
+        personas.add(new Persona("David", 3478963201L, "david@gmail.com", 15));
+        personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", 80));
+    }
+}
