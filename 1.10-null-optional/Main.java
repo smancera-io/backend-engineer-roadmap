@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**
@@ -22,5 +23,12 @@ public class Main {
 
         Persona persOptional = Persona.buscarPersonaPorNombre("David", personas).orElse(new Persona("Anonimo", 0, null, 0));
         System.out.println("Sesion iniciada con " + persOptional);
+
+        try {
+            Persona personaGet = Persona.buscarPersonaPorNombre("Andres", personas).orElseThrow();
+            System.out.println("Sesion intentada con: " + personaGet);
+        } catch (NoSuchElementException e) {
+            System.out.println("Persona no encontrada finalizando intento de sesion.");
+        }
     }
 }
