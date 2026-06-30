@@ -21,7 +21,7 @@ public class Main {
             System.out.println("El usuario exisite");
         }
 
-        Persona persOptional = Persona.buscarPersonaPorNombre("David", personas)
+        Persona persOptional = Persona.buscarPersonaPorNombre("Antonio", personas)
                 .orElse(new Persona("Anonimo", 0, null, 0));
         System.out.println("Sesion iniciada con " + persOptional);
 
