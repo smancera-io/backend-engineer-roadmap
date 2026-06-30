@@ -16,12 +16,13 @@ public class Main {
         personas.add(new Persona("David", 3478963201L, "david@gmail.com", 15));
         personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", 80));
 
-        Optional <Persona> personaEncontrada = Persona.buscarPersonaPorNombre("Samuel", personas);
-        if (personaEncontrada.isPresent()){
+        Optional<Persona> personaEncontrada = Persona.buscarPersonaPorNombre("Samuel", personas);
+        if (personaEncontrada.isPresent()) {
             System.out.println("El usuario exisite");
         }
 
-        Persona persOptional = Persona.buscarPersonaPorNombre("David", personas).orElse(new Persona("Anonimo", 0, null, 0));
+        Persona persOptional = Persona.buscarPersonaPorNombre("David", personas)
+                .orElse(new Persona("Anonimo", 0, null, 0));
         System.out.println("Sesion iniciada con " + persOptional);
 
         try {
