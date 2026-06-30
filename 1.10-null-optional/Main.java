@@ -19,5 +19,8 @@ public class Main {
         if (personaEncontrada.isPresent()){
             System.out.println("El usuario exisite");
         }
+
+        Persona persOptional = Persona.buscarPersonaPorNombre("David", personas).orElse(new Persona("Anonimo", 0, null, 0));
+        System.out.println("Sesion iniciada con " + persOptional);
     }
 }
