@@ -17,7 +17,7 @@ public class Main {
 
         Optional <Persona> personaEncontrada = Persona.buscarPersonaPorNombre("Samuel", personas);
         if (personaEncontrada.isPresent()){
-            System.out.println("Persona encontrada");
+            System.out.println("El usuario exisite");
         }
     }
 }
