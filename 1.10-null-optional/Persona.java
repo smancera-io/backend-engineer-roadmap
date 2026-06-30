@@ -1,16 +1,16 @@
 import java.util.List;
 import java.util.Optional;
 
-class Persona implements Comparable <Persona> {
+class Persona implements Comparable<Persona> {
 
     /* Create attributes */
     private String name;
     private long phoneNumber;
     private String email;
     private int age;
-    
+
     /* Create constructor method */
-    public Persona (String name, long phoneNumber, String email, int age){
+    public Persona(String name, long phoneNumber, String email, int age) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -54,45 +54,51 @@ class Persona implements Comparable <Persona> {
     }
 
     /* Create getter methods */
-    public String getName () {
+    public String getName() {
         return name;
     }
-    public long getPhoneNumber () {
+
+    public long getPhoneNumber() {
         return phoneNumber;
     }
-    public String getEmail () {
+
+    public String getEmail() {
         return email;
     }
-    public int getAge () {
+
+    public int getAge() {
         return age;
     }
 
     /* Create setter methods */
-    public void setName (String name) {
+    public void setName(String name) {
         this.name = name;
     }
-    public void setPhoneNumber (long phoneNumber) {
+
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    public void setEmail (String email) {
-        this.email =email;
+
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public void setAge (int age) {
+
+    public void setAge(int age) {
         this.age = age;
     }
 
     /* Modify compareTo method to use TreeSet collection */
     @Override
-    public int compareTo(Persona persona){
+    public int compareTo(Persona persona) {
         return this.name.compareTo(persona.name);
     }
 
-    public static Optional <Persona> buscarPersonaPorNombre (String name, List <Persona> personas) {
-        if (name == null){
+    public static Optional<Persona> buscarPersonaPorNombre(String name, List<Persona> personas) {
+        if (name == null) {
             return Optional.empty();
         }
         for (Persona persona : personas) {
-            if (persona.getName().equals(name)){
+            if (persona.getName().equals(name)) {
                 return Optional.of(persona);
             }
         }
