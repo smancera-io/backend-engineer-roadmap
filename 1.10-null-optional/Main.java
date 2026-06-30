@@ -27,9 +27,11 @@ public class Main {
 
         try {
             Persona personaGet = Persona.buscarPersonaPorNombre("Andres", personas).orElseThrow();
-            System.out.println("Sesion intentada con: " + personaGet);
+            System.out.println("Sesion ingresada con: " + personaGet);
         } catch (NoSuchElementException e) {
             System.out.println("Persona no encontrada finalizando intento de sesion.");
         }
+
+        System.out.println(personaEncontrada.map(persona -> persona.getEmail()));
     }
 }
