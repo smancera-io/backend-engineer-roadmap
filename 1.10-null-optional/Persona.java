@@ -7,10 +7,10 @@ class Persona implements Comparable<Persona> {
     private String name;
     private long phoneNumber;
     private String email;
-    private int age;
+    private Integer age;
 
     /* Create constructor method */
-    public Persona(String name, long phoneNumber, String email, int age) {
+    public Persona(String name, long phoneNumber, String email, Integer age) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -66,7 +66,7 @@ class Persona implements Comparable<Persona> {
         return email;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
@@ -83,7 +83,7 @@ class Persona implements Comparable<Persona> {
         this.email = email;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

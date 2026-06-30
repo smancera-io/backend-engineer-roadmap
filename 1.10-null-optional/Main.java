@@ -14,7 +14,7 @@ public class Main {
         personas.add(new Persona("Esteban", 3299874562L, "esteban@gmail.com", 45));
         personas.add(new Persona("Juan", 3134896522L, "juan@gmail.com", 8));
         personas.add(new Persona("David", 3478963201L, "david@gmail.com", 15));
-        personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", 80));
+        personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", null));
 
         Optional<Persona> personaEncontrada = Persona.buscarPersonaPorNombre("Samuel", personas);
         if (personaEncontrada.isPresent()) {
@@ -33,5 +33,14 @@ public class Main {
         }
 
         System.out.println(personaEncontrada.map(persona -> persona.getEmail()));
+
+        try {
+            for (Persona persona2 : personas) {
+                int edad = persona2.getAge();
+                System.out.println(edad);
+            }
+        } catch (NullPointerException e) {
+            System.out.println("Error: Edad nula " + e);
+        }
     }
 }
