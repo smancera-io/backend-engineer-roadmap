@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.Optional;
+
 class Persona implements Comparable <Persona> {
 
     /* Create attributes */
@@ -82,5 +85,17 @@ class Persona implements Comparable <Persona> {
     @Override
     public int compareTo(Persona persona){
         return this.name.compareTo(persona.name);
+    }
+
+    public static Optional <Persona> buscarPersonaPorNombre (String name, List <Persona> personas) {
+        if (name == null){
+            return Optional.empty();
+        }
+        for (Persona persona : personas) {
+            if (persona.getName().equals(name)){
+                return Optional.of(persona);
+            }
+        }
+        return Optional.empty();
     }
 }
