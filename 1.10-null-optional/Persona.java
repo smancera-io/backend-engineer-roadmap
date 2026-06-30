@@ -93,6 +93,7 @@ class Persona implements Comparable<Persona> {
         return this.name.compareTo(persona.name);
     }
 
+    /* Static method to searchByName */
     public static Optional<Persona> buscarPersonaPorNombre(String name, List<Persona> personas) {
         if (name == null) {
             return Optional.empty();
