@@ -1,12 +1,16 @@
 public class Producto {
+
+    /* Private attributes */
     private int id;
     private String name;
 
+    /* Constructor method */
     public Producto (int id, String name) {
         this.id = id;
         this.name = name;
     }
 
+    /* hashCode method with id */
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -15,6 +19,7 @@ public class Producto {
         return result;
     }
 
+    /* equals method with id */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
