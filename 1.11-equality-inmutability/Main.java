@@ -13,5 +13,9 @@ public class Main {
 
         /* Add object to hashMap */
         hashMap.put(harina, "Encontrado producto Harina");
+
+        /* Show that using id to compare with another object if it has the same id return de same value */
+        String result = hashMap.get(leche);
+        System.out.println(result);
     }
 }
