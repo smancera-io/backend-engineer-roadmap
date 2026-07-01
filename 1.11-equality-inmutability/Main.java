@@ -6,5 +6,9 @@ public class Main {
         
         /* Create hashMap structure */
         Map <Integer, String> hashMap = new HashMap<>();
+
+        /* Create instances of Producto class */
+        Producto harina = new Producto(1, "Harina");
+        Producto leche = new Producto(1, "Leche");
     }
 }
