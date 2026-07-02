@@ -7,4 +7,11 @@ public final class PuntoGeografico {
         this.longitud = longitud;
     }
 
+    public double getLatitud () {
+        return latitud;
+    }
+    public double getLongitud () {
+        return longitud;
+    }
+
 }
