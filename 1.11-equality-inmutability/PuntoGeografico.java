@@ -17,4 +17,9 @@ public final class PuntoGeografico {
         return longitud;
     }
 
+    /* Setter method in order to try inmutability objects */
+    public void setLatitu () {
+        throw new UnsupportedOperationException("Este objeto no puede ser modifcado es de solo lectura o uso");
+    }
+
 }
