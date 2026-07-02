@@ -19,5 +19,6 @@ public class Main {
         System.out.println(result);
 
         PuntoGeografico maldivas = new PuntoGeografico(41031.5 , 733033.3);
+        System.out.println("Punto geografico inical: " + maldivas.getLatitud());
     }
 }
