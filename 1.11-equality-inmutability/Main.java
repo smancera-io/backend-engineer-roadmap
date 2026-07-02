@@ -1,4 +1,3 @@
-import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,14 +21,10 @@ public class Main {
         PuntoGeografico maldivas = new PuntoGeografico(41031.5 , 733033.3);
         System.out.println("Punto geografico inical: " + maldivas.getLatitud());
         try {
-            System.out.println("Intentando modificar el valor de latitud");
-            Field campoLatitud = PuntoGeografico.class.getDeclaredField("latitud");
-            campoLatitud.setAccessible(true);
-            campoLatitud.set(maldivas, 40.4167);
-            
-            System.out.println("¡El código de modificación se ejecutó!");
-        } catch (Exception e) {
-            System.out.println("Error en el proceso:" + e);
+            maldivas.setLatitud(4.0256);
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Error en el proceso:" + e.getMessage());
         }
+        System.out.println("Valor final: " + maldivas.getLatitud());
     }
 }
