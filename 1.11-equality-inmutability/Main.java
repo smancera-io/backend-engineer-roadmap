@@ -18,13 +18,20 @@ public class Main {
         String result = hashMap.get(leche);
         System.out.println(result);
 
+        /* Create an instance of PuntoGeografico class */
         PuntoGeografico maldivas = new PuntoGeografico(41031.5 , 733033.3);
+
+        /* Print initial and inmutable value */
         System.out.println("Punto geografico inical: " + maldivas.getLatitud());
+
+        /* Try to change the value */
         try {
             maldivas.setLatitud(4.0256);
         } catch (UnsupportedOperationException e) {
             System.out.println("Error en el proceso:" + e.getMessage());
         }
+
+        /* Print the final value that is the same as the first one */
         System.out.println("Valor final: " + maldivas.getLatitud());
     }
 }
