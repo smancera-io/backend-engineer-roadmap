@@ -17,5 +17,7 @@ public class Main {
         /* Show that using id to compare with another object if it has the same id return de same value */
         String result = hashMap.get(leche);
         System.out.println(result);
+
+        PuntoGeografico maldivas = new PuntoGeografico(41031.5 , 733033.3);
     }
 }
