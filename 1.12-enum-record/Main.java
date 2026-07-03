@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,5 +25,8 @@ public class Main {
         listaPedidos.stream()
                     .filter(pedido -> pedido.estado().esFinalizado())
                     .forEach(System.out::println);
+
+        HashSet <Pedido> pedidos = new HashSet<>();
+        pedidos.addAll(listaPedidos);
     }
 }
