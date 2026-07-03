@@ -15,4 +15,8 @@ public enum EstadoPedido {
     public String getDescripcion () {
         return descripcion;
     }
+
+    public boolean esFinalizado () {
+        return this == ENTREGADO ||  this == CANCELADO;   
+    }
 }
