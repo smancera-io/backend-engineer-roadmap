@@ -26,7 +26,6 @@ public class Main {
                     .filter(pedido -> pedido.estado().esFinalizado())
                     .forEach(System.out::println);
 
-        HashSet <Pedido> pedidos = new HashSet<>();
-        pedidos.addAll(listaPedidos);
+        HashSet <Pedido> pedidos = new HashSet<>(listaPedidos);
     }
 }
