@@ -9,5 +9,10 @@ public class Main {
         listaPedidos.add(new Pedido(3, "Juan", EstadoPedido.ENTREGADO, 570000));
         listaPedidos.add(new Pedido(4, "Sofia", EstadoPedido.EN_PROCESO, 890000));
         listaPedidos.add(new Pedido(5, "Daniel", EstadoPedido.CANCELADO, 254000));
+        listaPedidos.add(new Pedido(6, "Miguel", EstadoPedido.CREADO, 210000));
+        listaPedidos.add(new Pedido(7, "Esteban", EstadoPedido.ENVIADO, 1850000));
+        listaPedidos.add(new Pedido(8, "Nicolas", EstadoPedido.ENTREGADO, 400000));
+        listaPedidos.add(new Pedido(9, "Laura", EstadoPedido.EN_PROCESO, 190000));
+        listaPedidos.add(new Pedido(10, "Carlos", EstadoPedido.EN_PROCESO, 175000));
     }
 }
