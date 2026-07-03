@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List <Pedido> listaPedidos = new LinkedList<>();
+        List<Pedido> listaPedidos = new LinkedList<>();
         listaPedidos.add(new Pedido(1, "Samuel", EstadoPedido.CREADO, 2100000));
         listaPedidos.add(new Pedido(2, "David", EstadoPedido.ENVIADO, 1750000));
         listaPedidos.add(new Pedido(3, "Juan", EstadoPedido.ENTREGADO, 570000));
@@ -18,15 +18,15 @@ public class Main {
 
         System.out.println("Pedidos 'EN_PROCESO': ");
         listaPedidos.stream()
-                    .filter(pedido -> pedido.estado() == EstadoPedido.EN_PROCESO)
-                    .forEach(System.out::println);
+                .filter(pedido -> pedido.estado() == EstadoPedido.EN_PROCESO)
+                .forEach(System.out::println);
 
         System.out.println("Pedido 'FINALIZADOS': ");
         listaPedidos.stream()
-                    .filter(pedido -> pedido.estado().esFinalizado())
-                    .forEach(System.out::println);
+                .filter(pedido -> pedido.estado().esFinalizado())
+                .forEach(System.out::println);
 
-        HashSet <Pedido> pedidosSet = new HashSet<>(listaPedidos);
+        HashSet<Pedido> pedidosSet = new HashSet<>(listaPedidos);
         Pedido pedidoDuplicado = new Pedido(4, "Sofia", EstadoPedido.EN_PROCESO, 890000);
         System.out.println("HashOriginal: " + listaPedidos.get(3).hashCode());
         System.out.println("HashClon: " + pedidoDuplicado.hashCode());
