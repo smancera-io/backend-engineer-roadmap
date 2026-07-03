@@ -27,5 +27,8 @@ public class Main {
                     .forEach(System.out::println);
 
         HashSet <Pedido> pedidos = new HashSet<>(listaPedidos);
+        Pedido pedidoDuplicado = new Pedido(4, "Sofia", EstadoPedido.EN_PROCESO, 890000);
+        System.out.println("HashOriginal: " + listaPedidos.get(3).hashCode());
+        System.out.println("HashClon: " + pedidoDuplicado.hashCode());
     }
 }
