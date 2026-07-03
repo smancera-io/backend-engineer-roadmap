@@ -15,8 +15,14 @@ public class Main {
         listaPedidos.add(new Pedido(9, "Laura", EstadoPedido.EN_PROCESO, 190000));
         listaPedidos.add(new Pedido(10, "Carlos", EstadoPedido.EN_PROCESO, 175000));
 
+        System.out.println("Pedidos 'EN_PROCESO': ");
         listaPedidos.stream()
                     .filter(pedido -> pedido.estado() == EstadoPedido.EN_PROCESO)
+                    .forEach(System.out::println);
+
+        System.out.println("Pedido 'FINALIZADOS': ");
+        listaPedidos.stream()
+                    .filter(pedido -> pedido.estado().esFinalizado())
                     .forEach(System.out::println);
     }
 }
