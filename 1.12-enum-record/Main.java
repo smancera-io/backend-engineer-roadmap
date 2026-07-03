@@ -14,5 +14,9 @@ public class Main {
         listaPedidos.add(new Pedido(8, "Nicolas", EstadoPedido.ENTREGADO, 400000));
         listaPedidos.add(new Pedido(9, "Laura", EstadoPedido.EN_PROCESO, 190000));
         listaPedidos.add(new Pedido(10, "Carlos", EstadoPedido.EN_PROCESO, 175000));
+
+        listaPedidos.stream()
+                    .filter(pedido -> pedido.estado() == EstadoPedido.EN_PROCESO)
+                    .forEach(System.out::println);
     }
 }
