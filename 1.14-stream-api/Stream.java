@@ -39,5 +39,9 @@ public class Stream {
         /* Use mapToInt */
         int totalAge = personas.stream().mapToInt(Persona::getAge).sum();
         System.out.println(totalAge);
+
+        /* Use joining */
+        String nombres = personas.stream().map(Persona::getName).collect(Collectors.joining(", "));
+        System.out.println(nombres);
     }
 }
