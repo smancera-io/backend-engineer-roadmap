@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -28,6 +29,13 @@ public class Main {
         /* Supplier lambda to create a default instance */
         Supplier<Persona> crearDefaultPersonaLambda = () -> new Persona("Samuel", 3559633152L, "samuel@gmail.com", 20);
         Supplier<Persona> crearDefaultPersonaReference = Persona :: new;
+
+        List <Persona> personas = new LinkedList<>();
+        personas.add(new Persona("Andres", 3229455210L, "andres@gmail.com", 19));
+        personas.add(new Persona("Esteban", 3299874562L, "esteban@gmail.com", 45));
+        personas.add(new Persona("Juan", 3134896522L, "juan@gmail.com", 8));
+        personas.add(new Persona("David", 3478963201L, "david@gmail.com", 15));
+        personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", null));
 
     }
 }
