@@ -18,24 +18,25 @@ public class Main {
         Predicate<Persona> mayorEdadReference = Persona::esMayor;
 
         /* Function lambda to get a List of emails */
-        Function<List<Persona>, List<String>> listaEmailLambda = lista -> lista.stream().map(persona -> persona.getEmail())
+        Function<List<Persona>, List<String>> listaEmailLambda = lista -> lista.stream()
+                .map(persona -> persona.getEmail())
                 .collect(Collectors.toList());
         /* Function method reference to get a List of emails */
-        Function<List<Persona>, List<String>> listaEmailReference = lista -> lista.stream().map(Persona :: getEmail)
+        Function<List<Persona>, List<String>> listaEmailReference = lista -> lista.stream().map(Persona::getEmail)
                 .collect(Collectors.toList());
 
         /* Consumer lambda to print a person */
         Consumer<Persona> imprimirPersonaLambda = persona -> System.out.println(persona);
         /* Consumer method reference to print a person */
-        Consumer<Persona> imprimirPersonaReference = System.out :: println;
+        Consumer<Persona> imprimirPersonaReference = System.out::println;
 
         /* Supplier lambda to create a default instance */
         Supplier<Persona> crearDefaultPersonaLambda = () -> new Persona("Samuel", 3559633152L, "samuel@gmail.com", 20);
         /* Sipplier method reference to create a default instance */
-        Supplier<Persona> crearDefaultPersonaReference = Persona :: new;
+        Supplier<Persona> crearDefaultPersonaReference = Persona::new;
 
         /* Create a LinkedList of Persona class */
-        List <Persona> personas = new LinkedList<>();
+        List<Persona> personas = new LinkedList<>();
 
         /* Add values to LinkedList */
         personas.add(new Persona("Andres", 3229455210L, "andres@gmail.com", 19));
@@ -48,7 +49,7 @@ public class Main {
         int mayores = 0;
         int menores = 0;
         for (Persona persona : personas) {
-            if (mayorEdadLambda.test(persona)){
+            if (mayorEdadLambda.test(persona)) {
                 mayores++;
             } else {
                 menores++;
@@ -62,7 +63,7 @@ public class Main {
         int mayoresReference = 0;
         int menoresReference = 0;
         for (Persona persona : personas) {
-            if (mayorEdadReference.test(persona)){
+            if (mayorEdadReference.test(persona)) {
                 mayoresReference++;
             } else {
                 menoresReference++;
@@ -79,14 +80,14 @@ public class Main {
         System.out.print("Reference emails: ");
         System.out.println(listaEmailReference.apply(personas));
 
-         /* Use Consumer Lambda and Method Reference */
+        /* Use Consumer Lambda and Method Reference */
         System.out.println("===================");
         System.out.print("Persona lambda: ");
         imprimirPersonaLambda.accept(personas.get(1));
         System.out.print("Persona reference: ");
         imprimirPersonaReference.accept(personas.get(1));
 
-         /* Use Supplier Lambda and Method Reference */
+        /* Use Supplier Lambda and Method Reference */
         System.out.println("===================");
         System.out.println(crearDefaultPersonaLambda.get());
         System.out.println(crearDefaultPersonaReference.get());
