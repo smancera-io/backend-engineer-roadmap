@@ -17,6 +17,14 @@ class Persona implements Comparable<Persona> {
         this.age = age;
     }
 
+    /* Default constructor of an instance */
+    public Persona () {
+        this.name = "Samuel";
+        this.phoneNumber =3559633152L;
+        this.email = "samuel@gmail.com";
+        this.age = 20;
+    }
+
     /* Modify hashCode method to recognize values better */
     @Override
     public int hashCode() {
