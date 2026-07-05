@@ -106,6 +106,7 @@ class Persona implements Comparable<Persona> {
         return Optional.empty();
     }
 
+    /* Method to check if age is more or equals than 18 */
     public boolean esMayor () {
         if (age >= 18){
             return true;
