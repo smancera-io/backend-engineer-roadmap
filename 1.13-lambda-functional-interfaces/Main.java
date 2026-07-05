@@ -26,7 +26,8 @@ public class Main {
         Consumer<Persona> imprimirPersonaReference = System.out :: println;
 
         /* Supplier lambda to create a default instance */
-        Supplier<Persona> crearDefaultPersona = () -> new Persona("Samuel", 3559633152L, "samuel@gmail.com", 20);
+        Supplier<Persona> crearDefaultPersonaLambda = () -> new Persona("Samuel", 3559633152L, "samuel@gmail.com", 20);
+        Supplier<Persona> crearDefaultPersonaReference = Persona :: new;
 
     }
 }
