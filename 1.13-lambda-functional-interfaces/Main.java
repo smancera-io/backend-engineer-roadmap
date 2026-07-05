@@ -50,5 +50,18 @@ public class Main {
         System.out.println("Personas mayores: " + mayores);
         System.out.println("Personas menores: " + menores);
 
+        int mayoresReference = 0;
+        int menoresReference = 0;
+        for (Persona persona : personas) {
+            if (mayorEdadReference.test(persona)){
+                mayoresReference++;
+            } else {
+                menoresReference++;
+            }
+        }
+        System.out.println("Lambda results");
+        System.out.println("Personas mayores: " + mayoresReference);
+        System.out.println("Personas menores: " + menoresReference);
+
     }
 }
