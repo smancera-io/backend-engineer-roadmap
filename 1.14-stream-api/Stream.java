@@ -13,5 +13,8 @@ public class Stream {
         personas.add(new Persona("David", 3478963201L, "david@gmail.com", 15));
         personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", 50));
 
+        /* .stream to filter by age, sort by name and create a new list */
+        List<Persona> orderFilterByAge = personas.stream().filter(Persona::esMayor).sorted().toList();
+
     }
 }
