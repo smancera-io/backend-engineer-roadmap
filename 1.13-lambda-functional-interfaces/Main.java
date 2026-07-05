@@ -63,5 +63,11 @@ public class Main {
         System.out.println("Personas mayores: " + mayoresReference);
         System.out.println("Personas menores: " + menoresReference);
 
+        System.out.println("===================");
+        System.out.print("Lambda emails: ");
+        System.out.println(listaEmailLambda.apply(personas));
+        System.out.print("Reference emails: ");
+        System.out.println(listaEmailReference.apply(personas));
+
     }
 }
