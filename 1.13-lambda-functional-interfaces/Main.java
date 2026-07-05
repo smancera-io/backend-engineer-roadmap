@@ -23,5 +23,7 @@ public class Main {
 
         /* Supplier lambda to create a default instance */
         Supplier<Persona> crearDefaultPersona = () -> new Persona("Samuel", 3559633152L, "samuel@gmail.com", 20);
+
+        
     }
 }

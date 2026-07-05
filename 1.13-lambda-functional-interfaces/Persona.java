@@ -105,4 +105,12 @@ class Persona implements Comparable<Persona> {
         }
         return Optional.empty();
     }
+
+    public boolean esMayor () {
+        if (age >= 18){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
