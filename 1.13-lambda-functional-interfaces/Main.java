@@ -12,7 +12,8 @@ public class Main {
 
     public static void main(String[] args) {
         /* Predicate lambda to filter by age */
-        Predicate<Persona> mayorEdad = persona -> persona.getAge() > 18;
+        Predicate<Persona> mayorEdadLambda = persona -> persona.getAge() > 18;
+        Predicate<Persona> mayorEdadReference = Persona :: esMayor;
 
         /* Function lambda to get a List of emails */
         Function<List<Persona>, List<String>> listaEmail = lista -> lista.stream().map(persona -> persona.getEmail())
@@ -24,6 +25,6 @@ public class Main {
         /* Supplier lambda to create a default instance */
         Supplier<Persona> crearDefaultPersona = () -> new Persona("Samuel", 3559633152L, "samuel@gmail.com", 20);
 
-        
+
     }
 }
