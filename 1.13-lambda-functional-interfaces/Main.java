@@ -23,7 +23,7 @@ public class Main {
                 .collect(Collectors.toList());
 
         /* Consumer lambda to print each person */
-        Consumer<Persona> imprimirPersona = persona -> System.out.println(persona);
+        Consumer<Persona> imprimirPersonaLambda = persona -> System.out.println(persona);
         Consumer<Persona> imprimirPersonaReference = System.out :: println;
 
         /* Supplier lambda to create a default instance */
@@ -69,5 +69,10 @@ public class Main {
         System.out.print("Reference emails: ");
         System.out.println(listaEmailReference.apply(personas));
 
+        System.out.println("===================");
+        System.out.print("Persona lambda: ");
+        imprimirPersonaLambda.accept(personas.get(1));
+        System.out.print("Persona reference: ");
+        imprimirPersonaReference.accept(personas.get(1));
     }
 }
