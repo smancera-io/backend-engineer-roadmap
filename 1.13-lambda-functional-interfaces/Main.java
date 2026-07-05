@@ -74,5 +74,9 @@ public class Main {
         imprimirPersonaLambda.accept(personas.get(1));
         System.out.print("Persona reference: ");
         imprimirPersonaReference.accept(personas.get(1));
+
+        System.out.println("===================");
+        System.out.println(crearDefaultPersonaLambda.get());
+        System.out.println(crearDefaultPersonaReference.get());
     }
 }
