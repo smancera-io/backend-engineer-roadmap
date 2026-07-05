@@ -1,6 +1,8 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Stream {
@@ -20,11 +22,18 @@ public class Stream {
         System.out.println(orderFilterByAge);
 
         /* Use groupingBy */
-        Map <Boolean, List<Persona>> personasByLegalAge = personas.stream().collect(Collectors.groupingBy(Persona::esMayor));
+        Map<Boolean, List<Persona>> personasByLegalAge = personas.stream()
+                .collect(Collectors.groupingBy(Persona::esMayor));
         List<Persona> mayoresEdad = personasByLegalAge.get(true);
         List<Persona> menoresEdad = personasByLegalAge.get(false);
         System.out.println("Personas mayores de edad: " + mayoresEdad);
         System.out.println("Personas menores de edad: " + menoresEdad);
 
+        /* Use groupingBy and counting */
+        String phrase = "Juan tuvo un tubo y el tubo que tuvo se le rompió y para recuperar el tubo que tuvo tuvo que comprar un tubo igual al tubo que tuvo y rompió";
+        String[] palabras = phrase.toLowerCase().split("\\s+");
+        Map<String, Long> contadorPalabras = Arrays.stream(palabras)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(contadorPalabras);
     }
 }
