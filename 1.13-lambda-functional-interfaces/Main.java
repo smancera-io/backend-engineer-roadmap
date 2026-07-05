@@ -37,5 +37,18 @@ public class Main {
         personas.add(new Persona("David", 3478963201L, "david@gmail.com", 15));
         personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", null));
 
+        int mayores = 0;
+        int menores = 0;
+        for (Persona persona : personas) {
+            if (mayorEdadLambda.test(persona)){
+                mayores++;
+            } else {
+                menores++;
+            }
+        }
+        System.out.println("Lambda results");
+        System.out.println("Personas mayores: " + mayores);
+        System.out.println("Personas menores: " + menores);
+
     }
 }
