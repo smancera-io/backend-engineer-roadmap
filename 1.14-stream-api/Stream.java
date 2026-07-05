@@ -1,5 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Stream {
     public static void main(String[] args) {
@@ -15,6 +17,14 @@ public class Stream {
 
         /* .stream to filter by age, sort by name and create a new list */
         List<Persona> orderFilterByAge = personas.stream().filter(Persona::esMayor).sorted().toList();
+        System.out.println(orderFilterByAge);
+
+        /* Use groupingBy */
+        Map <Boolean, List<Persona>> personasByLegalAge = personas.stream().collect(Collectors.groupingBy(Persona::esMayor));
+        List<Persona> mayoresEdad = personasByLegalAge.get(true);
+        List<Persona> menoresEdad = personasByLegalAge.get(false);
+        System.out.println("Personas mayores de edad: " + mayoresEdad);
+        System.out.println("Personas menores de edad: " + menoresEdad);
 
     }
 }
