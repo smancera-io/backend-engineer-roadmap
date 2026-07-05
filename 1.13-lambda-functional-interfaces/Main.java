@@ -35,7 +35,7 @@ public class Main {
         personas.add(new Persona("Esteban", 3299874562L, "esteban@gmail.com", 45));
         personas.add(new Persona("Juan", 3134896522L, "juan@gmail.com", 8));
         personas.add(new Persona("David", 3478963201L, "david@gmail.com", 15));
-        personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", null));
+        personas.add(new Persona("Nicolas", 3967584123L, "nicolas@gmail.com", 50));
 
         int mayores = 0;
         int menores = 0;
@@ -59,7 +59,7 @@ public class Main {
                 menoresReference++;
             }
         }
-        System.out.println("Lambda results");
+        System.out.println("Reference results");
         System.out.println("Personas mayores: " + mayoresReference);
         System.out.println("Personas menores: " + menoresReference);
 
