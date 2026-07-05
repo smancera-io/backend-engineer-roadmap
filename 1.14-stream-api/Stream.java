@@ -35,5 +35,9 @@ public class Stream {
         Map<String, Long> contadorPalabras = Arrays.stream(palabras)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(contadorPalabras);
+
+        /* Use mapToInt */
+        int totalAge = personas.stream().mapToInt(Persona::getAge).sum();
+        System.out.println(totalAge);
     }
 }
