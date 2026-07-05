@@ -23,6 +23,7 @@ public class Main {
 
         /* Consumer lambda to print each person */
         Consumer<Persona> imprimirPersona = persona -> System.out.println(persona);
+        Consumer<Persona> imprimirPersonaReference = System.out :: println;
 
         /* Supplier lambda to create a default instance */
         Supplier<Persona> crearDefaultPersona = () -> new Persona("Samuel", 3559633152L, "samuel@gmail.com", 20);
