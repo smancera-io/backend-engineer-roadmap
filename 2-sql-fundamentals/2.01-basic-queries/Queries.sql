@@ -4,3 +4,6 @@ ORDER BY salary DESC;
 
 SELECT * FROM employee
 WHERE name LIKE 'A%' OR name LIKE '%ez%';
+
+SELECT * FROM employee
+WHERE city IN ('Bogotá', 'Medellín');
