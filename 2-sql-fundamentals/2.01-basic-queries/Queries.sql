@@ -10,3 +10,5 @@ WHERE city IN ('Bogotá', 'Medellín');
 
 SELECT * FROM employee
 WHERE salary BETWEEN 3000000 AND 4500000;
+
+SELECT DISTINCT city FROM employee;
