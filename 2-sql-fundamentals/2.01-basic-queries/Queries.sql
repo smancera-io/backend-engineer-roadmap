@@ -12,3 +12,7 @@ SELECT * FROM employee
 WHERE salary BETWEEN 3000000 AND 4500000;
 
 SELECT DISTINCT city FROM employee;
+
+SELECT salary FROM employee
+ORDER BY salary DESC, department ASC
+LIMIT 3;
