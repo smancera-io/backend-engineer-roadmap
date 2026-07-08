@@ -2,6 +2,9 @@
 /* Create database */
 CREATE DATABASE practice_sql;
 
+/* Select table to work with it */
+USE practice_sql;
+
 /* Create table 'employee' */
 CREATE TABLE employee (
     id INT AUTO_INCREMENT,
