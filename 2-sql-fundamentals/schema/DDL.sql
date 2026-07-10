@@ -49,15 +49,15 @@ CREATE TABLE developer_specialty (
     PRIMARY KEY (id)
 );
 
-/* Create proyect_role table */
-CREATE TABLE proyect_role (
+/* Create project_role table */
+CREATE TABLE project_role (
     id INT AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL UNIQUE,
     PRIMARY KEY (id)
 );
 
-/* Create proyect_status table */
-CREATE TABLE proyect_status (
+/* Create project_status table */
+CREATE TABLE project_status (
     id INT AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL UNIQUE,
     PRIMARY KEY (id)
@@ -98,8 +98,8 @@ CREATE TABLE client (
     CONSTRAINT fk_client_type FOREIGN KEY (type) REFERENCES client_type (id)
 );
 
-/* Create proyect table */
-CREATE TABLE proyect (
+/* Create project table */
+CREATE TABLE project (
     id INT AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
     description TEXT NOT NULL,
@@ -109,8 +109,8 @@ CREATE TABLE proyect (
     status INT NOT NULL,
     client INT NOT NULL,
     PRIMARY KEY (id),
-    CONSTRAINT fk_proyect_status FOREIGN KEY (status) REFERENCES proyect_status (id),
-    CONSTRAINT fk_proyect_client FOREIGN KEY (client) REFERENCES client (id)
+    CONSTRAINT fk_project_status FOREIGN KEY (status) REFERENCES project_status (id),
+    CONSTRAINT fk_project_client FOREIGN KEY (client) REFERENCES client (id)
 );
 
 /* Create task table */
@@ -121,12 +121,12 @@ CREATE TABLE task (
     priority INT NOT NULL,
     start_date DATE NOT NULL,
     estimated_completion_date DATE,
-    proyect INT NOT NULL,
+    project INT NOT NULL,
     developer INT NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT fk_task_status FOREIGN KEY (status) REFERENCES task_status (id),
     CONSTRAINT fk_task_priority FOREIGn KEY (priority) REFERENCES task_priority (id),
-    CONSTRAINT fk_task_proyect FOREIGN KEY (proyect) REFERENCES proyect (id),
+    CONSTRAINT fk_task_project FOREIGN KEY (project) REFERENCES project (id),
     CONSTRAINT fk_task_developer FOREIGN KEY (developer) REFERENCES developer (id)
 );
 
@@ -134,14 +134,14 @@ CREATE TABLE task (
 /* Create assignment table */
 CREATE TABLE assignment (
     id INT AUTO_INCREMENT,
-    proyect INT NOT NULL,
+    project INT NOT NULL,
     developer INT NOT NULL,
     role INT NOT NULL,
     assignment_date DATE,
     PRIMARY KEY (id),
-    CONSTRAINT fk_assignment_proyecy FOREIGN KEY (proyect) REFERENCES proyect (id),
+    CONSTRAINT fk_assignment_project FOREIGN KEY (project) REFERENCES project (id),
     CONSTRAINT fk_assignment_developer FOREIGN KEY (developer) REFERENCES developer (id),
-    CONSTRAINT fk_assignment_role FOREIGN KEY (role) REFERENCES proyect_role (id)
+    CONSTRAINT fk_assignment_role FOREIGN KEY (role) REFERENCES project_role (id)
 );
 
 /* Create history/transaction tables */
