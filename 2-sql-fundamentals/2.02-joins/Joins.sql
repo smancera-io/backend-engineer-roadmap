@@ -1,0 +1,8 @@
+SELECT 
+    CONCAT (p.name, " ", p.last_name) AS developer, 
+    devl.name AS level,
+    devl.base_salary
+FROM developer dev 
+JOIN person p ON dev.id = p.id
+JOIN developer_level devl ON dev.level = devl.id
+ORDER BY devl.base_salary DESC;
