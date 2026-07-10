@@ -11,3 +11,11 @@ SELECT *
 FROM proyect pr
 LEFT JOIN assignment a ON pr.id = a.proyect
 WHERE a.proyect IS NULL;
+
+SELECT
+    dev.id,
+    CONCAT (p.name, " ", p.last_name) AS developer
+FROM developer dev 
+JOIN person p ON dev.id = p.id
+LEFT JOIN assignment a ON a.developer = dev.id
+WHERE a.developer IS NULL;
