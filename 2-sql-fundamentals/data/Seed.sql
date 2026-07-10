@@ -52,7 +52,7 @@ VALUES
     (4, 'DevOps');
 
 INSERT INTO
-    proyect_role (id, name)
+    project_role (id, name)
 VALUES 
     (1, 'Lead'),
     (2, 'Developer'),
@@ -60,7 +60,7 @@ VALUES
     (4, 'QA');
 
 INSERT INTO
-    proyect_status (id, name)
+    project_status (id, name)
 VALUES 
     (1, 'Planification'),
     (2, 'In progress'),
@@ -109,7 +109,7 @@ VALUES
     (14, 1);
 
 INSERT INTO
-    proyect (name, description, budget, start_date, estimated_completion_date, status, client)
+    project (name, description, budget, start_date, estimated_completion_date, status, client)
 VALUES 
     ('Sistema de Facturación', 'Plataforma de facturación electrónica', 50000000, '2023-01-15', '2024-06-30', 2, 11),
     ('App Móvil Beta', 'Aplicación móvil para clientes', 30000000, '2024-03-01', NULL, 1, 12),
@@ -119,7 +119,7 @@ VALUES
     ('Proyecto Zeta', 'Nuevo proyecto en fase de definición', 15000000, '2024-05-01', NULL, 1, 12);  /* sin assignments */
 
 INSERT INTO
-    task (description, status, priority, start_date, estimated_completion_date, proyect, developer)
+    task (description, status, priority, start_date, estimated_completion_date, project, developer)
 VALUES 
     ('Diseñar modelo de datos', 3, 3, '2023-01-16', '2023-01-20', 1, 1),
     ('Implementar endpoint de facturas', 2, 3, '2023-02-01', '2023-02-15', 1, 2),
@@ -134,7 +134,7 @@ VALUES
 
 /* Insert values in junction tables */
 INSERT INTO
-    assignment (proyect, developer, role, assignment_date)
+    assignment (project, developer, role, assignment_date)
 VALUES 
     (1, 1, 1, '2023-01-15'),
     (1, 2, 2, '2023-01-20'),
