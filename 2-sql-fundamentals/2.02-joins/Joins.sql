@@ -6,3 +6,8 @@ FROM developer dev
 JOIN person p ON dev.id = p.id
 JOIN developer_level devl ON dev.level = devl.id
 ORDER BY devl.base_salary DESC;
+
+SELECT * 
+FROM proyect pr
+LEFT JOIN assignment a ON pr.id = a.proyect
+WHERE a.proyect IS NULL;
