@@ -30,8 +30,9 @@ ORDER BY increment DESC;
 
 SELECT 
     ps.name AS status,
-    COUNT(*) AS proyects
+    COUNT(*) AS proyects,
+    ROUND(AVG(p.budget), 2) AS avg_budget
 FROM project_status ps
 JOIN project p ON ps.id = p.status
 GROUP BY ps.id
-ORDER BY COUNT(*) DESC
+ORDER BY COUNT(*) DESC;
