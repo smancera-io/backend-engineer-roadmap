@@ -8,3 +8,10 @@ FROM project pr
 JOIN person p ON pr.client = p.id
 GROUP BY pr.client
 ORDER BY total_budget DESC;
+
+SELECT 
+    devl.name AS level,
+    COUNT(dev.id) AS total_developers
+FROM developer_level devl
+LEFT JOIN developer dev ON devl.id = dev.level
+GROUP BY devl.id, devl.name
