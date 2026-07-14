@@ -36,3 +36,12 @@ FROM project_status ps
 JOIN project p ON ps.id = p.status
 GROUP BY ps.id
 ORDER BY COUNT(*) DESC;
+
+SELECT 
+    pr.name AS role_name,
+    COUNT(*) AS total_assignments
+FROM project_role pr
+JOIN assignment a ON pr.id = a.role
+GROUP BY a.role
+HAVING COUNT(*) > 3
+ORDER BY COUNT(*) DESC;
