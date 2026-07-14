@@ -27,3 +27,11 @@ JOIN person per ON dev.id = per.id
 GROUP BY dev.id, per.name, per.last_name
 HAVING (MAX(dlh.salary) - MIN(dlh.salary)) > 1000000
 ORDER BY increment DESC;
+
+SELECT 
+    ps.name AS status,
+    COUNT(*) AS proyects
+FROM project_status ps
+JOIN project p ON ps.id = p.status
+GROUP BY ps.id
+ORDER BY COUNT(*) DESC
