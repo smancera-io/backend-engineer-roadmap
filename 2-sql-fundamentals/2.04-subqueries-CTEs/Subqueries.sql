@@ -1,3 +1,4 @@
+/* Query to get developer with salary over the average */
 SELECT 
     p.id,
     CONCAT(p.name, ' ', p.last_name) AS developer,
