@@ -13,7 +13,7 @@ WHERE
         FROM developer_level
     );
 
-/* Query to get developers with last salary over level avarage */
+/* Query to get developers with current salaries above the average salary for their level */
 SELECT
     p.id, 
     CONCAT(p.name, ' ', p.last_name) AS developer, 
