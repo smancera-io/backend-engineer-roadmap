@@ -14,3 +14,16 @@ WHERE
     );
 
 /* Query to get developers with last salary over level avarage */
+SELECT
+    p.id, 
+    CONCAT(p.name, ' ', p.last_name) AS developer, 
+    dlh.salary AS last_salary
+FROM person p
+JOIN developer dev ON p.id = dev.id
+JOIN developer_level_history dlh ON dev.id = dlh.developer
+GROUP BY p.id, dlh.salary, dev.level
+HAVING MAX(dlh.salary) > (
+        SELECT AVG(salary)
+        FROM developer_level_history
+        WHERE level = dev.level
+);
