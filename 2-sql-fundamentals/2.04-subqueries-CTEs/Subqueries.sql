@@ -12,3 +12,5 @@ WHERE
         SELECT AVG(base_salary)
         FROM developer_level
     );
+
+/* Query to get developers with last salary over level avarage */
