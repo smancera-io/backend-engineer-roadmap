@@ -26,4 +26,5 @@ HAVING MAX(dlh.salary) > (
         SELECT AVG(salary)
         FROM developer_level_history
         WHERE level = dev.level
-);
+)
+ORDER BY salary DESC;
