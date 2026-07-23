@@ -21,10 +21,13 @@ SELECT
 FROM person p
 JOIN developer dev ON p.id = dev.id
 JOIN developer_level_history dlh ON dev.id = dlh.developer
-GROUP BY p.id, dlh.salary, dev.level
-HAVING MAX(dlh.salary) > (
-        SELECT AVG(salary)
-        FROM developer_level_history
-        WHERE level = dev.level
+WHERE dlh.start_timestamp = (
+    SELECT MAX(start_timestamp)
+    FROM developer_level_history dlh2
+    WHERE dlh.developer = dlh2.developer
+) AND dlh.salary > (
+    SELECT AVG(salary)
+    FROM developer_level_history dlh3
+    WHERE dlh3.level = dev.level
 )
 ORDER BY salary DESC;
