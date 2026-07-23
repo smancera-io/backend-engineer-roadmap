@@ -36,3 +36,27 @@ WHERE dlh.start_timestamp = (
     )
 )
 ORDER BY salary DESC;
+
+SELECT 
+    pr.id AS project_id,
+    pr.name,
+    CONCAT (p.name, ' ', p.last_name) AS client,
+    pr.budget,
+    ps.name AS status
+FROM project pr
+JOIN person p ON pr.client = p.id
+JOIN project_status ps ON pr.status = ps.id
+JOIN assignment a ON pr.id = a.project 
+GROUP BY pr.id
+HAVING (
+    COUNT(DISTINCT a.developer) > (
+        SELECT 
+            ROUND(AVG(number_developers), 1) 
+        FROM (
+            SELECT 
+                COUNT(DISTINCT a.developer) AS number_developers
+            FROM project p
+            LEFT JOIN assignment a ON p.id = a.project
+            GROUP BY p.id) AS unique_developers_query
+    )
+);
