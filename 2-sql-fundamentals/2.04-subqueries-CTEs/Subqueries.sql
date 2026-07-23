@@ -60,3 +60,24 @@ HAVING (
             GROUP BY p.id) AS unique_developers_query
     )
 );
+
+SELECT DISTINCT
+    dev.id AS developer_id,
+    CONCAT (p.name, ' ', p.last_name) AS developer_name,
+    dl.name AS level,
+    ds.name AS specialty
+FROM developer dev
+JOIN assignment a ON dev.id = a.developer
+JOIN person p ON dev.id = p.id
+JOIN developer_level dl ON dev.level = dl.id
+JOIN developer_specialty ds ON dev.specialty = ds.id
+WHERE a.project IN (
+    SELECT 
+        pr.id
+    FROM project pr
+    WHERE budget = (
+        SELECT 
+            MAX(budget)
+        FROM project)
+)
+ORDER BY dev.id ASC;
