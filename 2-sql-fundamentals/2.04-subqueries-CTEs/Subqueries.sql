@@ -29,5 +29,10 @@ WHERE dlh.start_timestamp = (
     SELECT AVG(salary)
     FROM developer_level_history dlh3
     WHERE dlh3.level = dev.level
+    AND dlh3.start_timestamp = (
+        SELECT MAX(start_timestamp)
+        FROM developer_level_history dlh4
+        WHERE dlh4.developer = dlh3.developer
+    )
 )
 ORDER BY salary DESC;
