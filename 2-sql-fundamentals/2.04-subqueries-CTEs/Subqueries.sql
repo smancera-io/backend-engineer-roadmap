@@ -1,4 +1,4 @@
-/* Query to get developer with salary over the average */
+/* Subquery to get developer with salary over the average */
 SELECT 
     p.id, 
     CONCAT(p.name, ' ', p.last_name) AS developer, 
@@ -13,7 +13,7 @@ WHERE
         FROM developer_level
     );
 
-/* Query to get developers with current salaries above the average salary for their level */
+/* Subquery to get developers with current salaries above the average salary for their level */
 SELECT
     p.id, 
     CONCAT(p.name, ' ', p.last_name) AS developer, 
@@ -37,6 +37,7 @@ WHERE dlh.start_timestamp = (
 )
 ORDER BY salary DESC;
 
+/* Subquery to list projects with a number of developers above average */
 SELECT 
     pr.id AS project_id,
     pr.name,
@@ -61,6 +62,7 @@ HAVING (
     )
 );
 
+/* Subquery to list developer who have participated in the most expensive project */
 SELECT DISTINCT
     dev.id AS developer_id,
     CONCAT (p.name, ' ', p.last_name) AS developer_name,
@@ -82,6 +84,7 @@ WHERE a.project IN (
 )
 ORDER BY dev.id ASC;
 
+/* Subquery to list projects without a developer at senior level or above */
 SELECT 
     pr.id,
     pr.name,
