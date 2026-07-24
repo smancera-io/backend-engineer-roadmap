@@ -81,3 +81,19 @@ WHERE a.project IN (
         FROM project)
 )
 ORDER BY dev.id ASC;
+
+SELECT 
+    pr.id,
+    pr.name,
+    CONCAT (p.name, ' ', p.last_name) AS client,
+    pr.budget
+FROM project pr
+JOIN person p ON pr.client = p.id
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM assignment a
+    JOIN developer dev ON a.developer = dev.id
+    JOIN developer_level dl ON dev.level = dl.id
+    WHERE a.project = pr.id
+    AND dl.name IN ('Senior', 'Lead', 'Architect')
+);
